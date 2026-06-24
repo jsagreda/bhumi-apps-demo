@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logoUrl from './assets/logo.png';
 import { onAuthStateChanged, signOut, User } from 'firebase/auth';
 import { auth, db, INSTRUCTOR_NAMES } from './lib/firebase';
 import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
@@ -79,7 +80,7 @@ export default function App() {
           transition={{ repeat: Infinity, duration: 2 }}
           className="w-16 h-16 bg-sage-600 rounded-2xl mx-auto shadow-xl shadow-sage-600/20 flex items-center justify-center"
         >
-          <img src="/logo.png" alt="Logo" className="w-10 h-10 grayscale invert brightness-0 invert-100" style={{ filter: 'brightness(0) invert(1)' }} />
+          <img src={logoUrl} alt="Logo" className="w-10 h-10 grayscale invert brightness-0 invert-100" style={{ filter: 'brightness(0) invert(1)' }} />
         </motion.div>
         <p className="font-serif text-sage-900 tracking-wide">Cargando calma...</p>
       </div>
@@ -106,7 +107,7 @@ export default function App() {
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-sage-600 to-sage-800 rounded-full opacity-10 blur-2xl pointer-events-none"></div>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Bhumi Yoga" className="h-10 w-auto" />
+            <img src={logoUrl} alt="Bhumi Yoga" className="h-10 w-auto" />
             <div className="block">
               <h1 className="font-serif text-xl text-sage-900 leading-tight">Bhumi Yoga</h1>
               <p className="text-[10px] text-sage-500 italic tracking-wide">Studio Manager Professional</p>
