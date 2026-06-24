@@ -17,13 +17,16 @@ seeded with fictional data — completely separate from any production system.
 | 🧘 Studio Manager | https://bhumi-demo-manager.web.app |
 | 📊 ERP / Back-office | https://bhumi-demo-erp.web.app |
 
-**Demo login** (Studio Manager & ERP):
+**Demo credentials by app:**
 
-```
-user:     demo
-password: bhumidemo2026
-```
+| App | Email | Password | Role |
+|---|---|---|---|
+| 🧘 Studio Manager | `demo@demo-yoga.app` | `bhumidemo2026` | Admin / Instructor |
+| 📊 ERP / Back-office | `demo@demo-yoga.app` | `bhumidemo2026` | Admin |
+| 📅 Calendar | `estudiante@demo-yoga.app` | `bhumidemo2026` | Student |
+| 🌐 Public Web | — | — | No login required |
 
+> The Calendar also supports **open registration** — any email works to create a student account.
 > The demo backend holds only fictional students, transactions and sales.
 > Feel free to click around — it cannot affect any real data.
 
