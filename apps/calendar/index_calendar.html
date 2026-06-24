@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="google-site-verification" content="vQc5Qr8sh-LifTgDPPo9MWf7Tyj5q8UE3okx5o5a_g4" />
+    <title>Bhumi Yoga Studio</title>
+    <link rel="icon" type="image/png" href="/logo.png?v=2">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#cf5038",
+                        "primary-dark": "#b54530",
+                        "orange": "#f59855",
+                        "navy": "#1a2a51",
+                        "sage": "#869a97",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#f59855",
+                        "surface-dim": "#e8e6e1",
+                        "surface-container-high": "#eae8e3",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-background": "#1a2a51",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#1a2a51",
+                        "primary-container": "#cf5038",
+                        "secondary": "#869a97",
+                        "background": "#fbfbfc",
+                        "surface-tint": "#cf5038",
+                        "surface-variant": "#eaedf4",
+                        "surface-container": "#f2f4f7",
+                        "surface-bright": "#ffffff",
+                        "tertiary": "#1a2a51",
+                        "surface-container-low": "#f5f7fa",
+                        "surface": "#fbfbfc",
+                        "inverse-on-surface": "#f2f4f7",
+                        "on-secondary-fixed": "#111f10",
+                        "on-primary-fixed": "#301405",
+                        "secondary-container": "#eaedf4",
+                        "outline": "#869a97",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#1a2a51",
+                        "outline-variant": "#d5dce8",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#1a2a51",
+                        "on-surface": "#1a2a51",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "inverse-primary": "#f59855",
+                        "primary-fixed": "#fde8e4",
+                        "on-surface-variant": "#869a97",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "32px",
+                        "container-max-width": "1200px",
+                        "stack-sm": "16px",
+                        "margin": "32px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "stack-lg": "64px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "body-lg": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "label-caps": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "body-md": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "h3": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "h2": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "sans": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"],
+                        "serif": ["Hurme Geometric Sans 4", "Montserrat", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #fbfbfc;
+            color: #1a2a51;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Hurme Geometric Sans 4', 'Montserrat', sans-serif;
+        }
+
+        ::selection { background: rgba(207, 80, 56, 0.18); }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d5dce8; border-radius: 99px; border: 2px solid #fbfbfc; }
+        ::-webkit-scrollbar-thumb:hover { background: #869a97; }
+
+        /* ── Animaciones base ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popIn {
+            0%   { opacity: 0; transform: scale(0.92) translateY(12px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 0.55; }
+            50%      { transform: scale(1.12); opacity: 1; }
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33%      { transform: translate(24px, -18px) scale(1.08); }
+            66%      { transform: translate(-16px, 14px) scale(0.95); }
+        }
+
+        @keyframes shimmer {
+            0%   { background-position: -400px 0; }
+            100% { background-position: 400px 0; }
+        }
+
+        @keyframes barShine {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(250%); }
+        }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-7px); }
+        }
+
+        @keyframes particleFall {
+            0%   { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+            100% { opacity: 0; transform: translate(var(--px), var(--py)) rotate(var(--pr)) scale(0.4); }
+        }
+
+        .anim-card { animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .anim-pop  { animation: popIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .view-enter { animation: fadeUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+        /* Orbes decorativos flotantes */
+        .orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(60px);
+            pointer-events: none;
+            animation: drift 14s ease-in-out infinite;
+        }
+
+        /* Anillos de respiración (logo login / heros) */
+        .breath-ring {
+            position: absolute;
+            border-radius: 9999px;
+            border: 1.5px solid rgba(207, 80, 56, 0.25);
+            animation: breathe 5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Skeleton de carga */
+        .skeleton {
+            background: linear-gradient(90deg, #f2f4f7 25%, #fafbfc 50%, #f2f4f7 75%);
+            background-size: 800px 100%;
+            animation: shimmer 1.4s linear infinite;
+            border-radius: 1.5rem;
+        }
+
+        /* Brillo que recorre la barra de progreso */
+        .bar-shine {
+            position: absolute;
+            inset: 0;
+            width: 40%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+            animation: barShine 2.4s ease-in-out infinite;
+        }
+
+        /* Hover de tarjetas de clase */
+        .slot-card {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .slot-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px -12px rgba(26, 42, 81, 0.16);
+            border-color: rgba(207, 80, 56, 0.25);
+        }
+
+        /* Partícula de celebración */
+        .party-dot {
+            position: fixed;
+            width: 9px;
+            height: 9px;
+            border-radius: 3px;
+            z-index: 2000;
+            pointer-events: none;
+            animation: particleFall 1.1s cubic-bezier(0.2, 0.6, 0.4, 1) forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .anim-card, .anim-pop, .view-enter, .orb, .breath-ring, .bar-shine, .party-dot { animation: none !important; }
+            .slot-card:hover { transform: none; }
+        }
+
+        .loading-bar {
+            height: 3px;
+            background: #eaedf4;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: none;
+        }
+
+        .loading-fill {
+            height: 100%;
+            background: #cf5038;
+            animation: loading 1.2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+                margin-left: 0;
+            }
+
+            50% {
+                width: 60%;
+                margin-left: 20%;
+            }
+
+            100% {
+                width: 0;
+                margin-left: 100%;
+            }
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(135deg, #1a2a51, #243a6b);
+            color: #fff;
+            padding: 13px 26px;
+            border-radius: 99px;
+            font-size: 14px;
+            opacity: 0;
+            border: 1px solid rgba(245, 152, 85, 0.35);
+            box-shadow: 0 12px 32px -8px rgba(26, 42, 81, 0.45);
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: 1000;
+        }
+
+        #toast.on {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .overlay.open {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <div class="loading-bar" id="loadingBar">
+        <div class="loading-fill"></div>
+    </div>
+
+    <!-- ══════════ LOGIN / REGISTRO ══════════ -->
+    <div id="loginScreen" class="fixed inset-0 z-[60] overflow-y-auto bg-gradient-to-br from-[#f9e4dc] via-[#fbf6f2] to-[#dde7e4]">
+      <!-- Fondo decorativo animado -->
+      <div class="fixed inset-0 overflow-hidden pointer-events-none">
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(207,80,56,0.10),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(134,154,151,0.18),_transparent_55%)]"></div>
+          <div class="orb w-96 h-96 bg-primary/20 -top-20 -left-24"></div>
+          <div class="orb w-80 h-80 bg-orange/25 top-1/3 -right-20" style="animation-delay:-5s"></div>
+          <div class="orb w-72 h-72 bg-sage/30 -bottom-16 left-1/4" style="animation-delay:-9s"></div>
+          <div class="orb w-64 h-64 bg-navy/10 top-10 right-1/3" style="animation-delay:-11s"></div>
+          <!-- Anillos concéntricos sutiles tras la tarjeta -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[640px] rounded-full border border-primary/10"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[820px] h-[820px] rounded-full border border-primary/[0.06]"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full border border-sage/10"></div>
+      </div>
+      <div class="min-h-full flex items-center justify-center p-6 py-10 relative">
+        <div class="w-full max-w-md bg-white/90 backdrop-blur-xl p-10 rounded-3xl shadow-2xl shadow-navy/10 border border-white/60 anim-pop">
+            <div class="text-center mb-8">
+                <div class="relative inline-block mb-6" style="animation: floatY 6s ease-in-out infinite">
+                    <img src="/Version%20Ppal.png" alt="Bhumi Yoga"
+                        class="w-full max-w-[280px] h-auto mx-auto object-contain relative z-10" onerror="this.src='/logo.png'">
+                </div>
+                <p class="font-body-md text-on-surface-variant italic">Tu camino a la serenidad</p>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <div id="loginForm">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-label-caps text-on-surface-variant mb-2">CORREO
+                            ELECTRÓNICO</label>
+                        <input type="email" id="loginEmail" placeholder="tu@correo.com"
+                            class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-4 focus:ring-primary/10 focus:border-primary bg-surface-container-lowest outline-none transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-label-caps text-on-surface-variant mb-2">CONTRASEÑA</label>
+                        <input type="password" id="loginPass" placeholder="••••••••"
+                            class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-4 focus:ring-primary/10 focus:border-primary bg-surface-container-lowest outline-none transition-all duration-300">
+                    </div>
+                    <button onclick="doLogin()" id="loginBtn"
+                        class="w-full bg-gradient-to-r from-primary to-[#e06a42] text-on-primary py-3.5 rounded-xl font-label-caps tracking-widest text-xs shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">ENTRAR</button>
+                </div>
+                <p id="loginError" class="text-error text-xs mt-3 hidden"></p>
+                <div class="mt-6 text-center text-sm font-body-md text-on-surface-variant">
+                    ¿Primera vez aquí? <a onclick="toggleAuthMode('register')"
+                        class="text-primary font-bold cursor-pointer hover:underline">Crear cuenta</a>
+                </div>
+            </div>
+
+            <!-- REGISTRO FORM -->
+            <div id="regForm" class="hidden">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-label-caps text-on-surface-variant mb-2">NOMBRE
+                            COMPLETO</label>
+                        <input type="text" id="regName" placeholder="Tu nombre"
+                            class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-4 focus:ring-primary/10 focus:border-primary bg-surface-container-lowest outline-none transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-label-caps text-on-surface-variant mb-2">CORREO
+                            ELECTRÓNICO</label>
+                        <input type="email" id="regEmail" placeholder="tu@correo.com"
+                            class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-4 focus:ring-primary/10 focus:border-primary bg-surface-container-lowest outline-none transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-label-caps text-on-surface-variant mb-2">CONTRASEÑA</label>
+                        <input type="password" id="regPass" placeholder="••••••••"
+                            class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-4 focus:ring-primary/10 focus:border-primary bg-surface-container-lowest outline-none transition-all duration-300">
+                    </div>
+                    <button onclick="doRegister()" id="regBtn"
+                        class="w-full bg-gradient-to-r from-primary to-[#e06a42] text-on-primary py-3.5 rounded-xl font-label-caps tracking-widest text-xs shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">CREAR
+                        CUENTA</button>
+                </div>
+                <p id="regError" class="text-error text-xs mt-3 hidden"></p>
+                <div class="mt-6 text-center text-sm font-body-md text-on-surface-variant">
+                    ¿Ya tienes cuenta? <a onclick="toggleAuthMode('login')"
+                        class="text-primary font-bold cursor-pointer hover:underline">Ingresar</a>
+                </div>
+            </div>
+
+            <!-- Opciones sociales -->
+            <div id="socialSection">
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-outline-variant/30"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="bg-white px-4 text-xs text-on-surface-variant font-sans">o continúa con</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <!-- Google -->
+                    <button onclick="doGoogleLogin()" id="googleBtn"
+                        class="w-full flex items-center justify-center gap-3 border border-outline-variant py-3 rounded-xl hover:bg-surface-container-low font-sans text-sm font-medium text-on-surface transition-all">
+                        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                                fill="#4285F4" />
+                            <path
+                                d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"
+                                fill="#34A853" />
+                            <path
+                                d="M3.964 10.706A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.706V4.962H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.038l3.007-2.332z"
+                                fill="#FBBC05" />
+                            <path
+                                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.962L3.964 6.294C4.672 4.169 6.656 3.58 9 3.58z"
+                                fill="#EA4335" />
+                        </svg>
+                        Continuar con Google
+                    </button>
+                </div>
+                <p id="socialError" class="text-error text-xs mt-3 hidden text-center"></p>
+            </div>
+
+            <!-- Legal Links (siempre visibles en la pantalla de login) -->
+            <div class="mt-8 pt-6 border-t border-outline-variant/30 text-center">
+                <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-on-surface-variant">
+                    <a href="/privacy-policy" target="_blank"
+                        class="hover:text-primary transition-colors">Política de Privacidad</a>
+                    <span class="text-on-surface-variant/40">·</span>
+                    <a href="/terms" target="_blank"
+                        class="hover:text-primary transition-colors">Términos</a>
+                    <span class="text-on-surface-variant/40">·</span>
+                    <a href="/purpose" target="_blank"
+                        class="hover:text-primary transition-colors">Propósito</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ APP PRINCIPAL ══════════ -->
+    <div id="appScreen" class="hidden flex-col min-h-screen">
+        <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant shadow-sm">
+            <div class="flex justify-between items-center px-6 md:px-8 py-3 md:py-4 max-w-7xl mx-auto">
+                <div class="flex items-center gap-3">
+                    <img alt="Bhumi Yoga" class="h-10 w-auto object-contain" src="/logo.png">
+                    <div class="flex flex-col leading-tight">
+                        <span class="text-base sm:text-lg font-h1 font-bold tracking-wide text-navy">Bhumi <span
+                                class="text-primary">Yoga</span></span>
+                        <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] text-sage font-label-caps">Studio</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-2 bg-surface-container p-1 rounded-full font-sans text-sm">
+                    <button onclick="switchTab('horario')" id="nav-horario"
+                        class="px-5 py-2 rounded-full bg-primary text-white font-semibold transition-all shadow-sm">Horarios</button>
+                    <button onclick="switchTab('misclases')" id="nav-misclases"
+                        class="px-5 py-2 rounded-full text-navy/60 hover:text-navy font-medium transition-all">Mis
+                        Clases</button>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <!-- Badge de paquete (desktop) — poblado por JS -->
+                    <div id="packBadge" class="hidden md:flex items-center gap-2"></div>
+                    <div
+                        class="flex items-center gap-2 text-navy bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+                        <img id="userAvatar" src="" alt="" class="w-6 h-6 rounded-full object-cover hidden">
+                        <span id="userProviderIcon"
+                            class="material-symbols-outlined text-[18px] text-sage">account_circle</span>
+                        <span id="userPill" class="text-xs font-label-caps font-semibold text-navy">Cargando...</span>
+                    </div>
+                    <button onclick="doLogout()" title="Cerrar sesión"
+                        class="w-9 h-9 rounded-full flex items-center justify-center text-sage hover:text-error hover:bg-red-50 transition-all border border-outline-variant">
+                        <span class="material-symbols-outlined text-[18px]">logout</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Badge de paquete (mobile) — tira fina bajo el header, poblada por JS -->
+            <div id="packBadgeMobile" class="md:hidden hidden border-t border-outline-variant/20 px-5 py-1.5 flex items-center justify-center gap-3 bg-white/80"></div>
+        </header>
+
+        <main id="appMain" class="mb-16 max-w-7xl mx-auto px-6 md:px-8 flex-grow w-full">
+            <!-- VISTA HORARIOS -->
+            <div id="tab-horario" class="flex flex-col gap-stack-lg">
+                <header class="anim-card flex flex-col gap-base relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-orange/5 to-sage/10 px-6 py-9 md:px-10 -mx-6 md:mx-0 border border-white/60">
+                    <div class="orb w-48 h-48 bg-orange/20 -right-10 -top-16"></div>
+                    <div class="orb w-40 h-40 bg-primary/10 right-1/4 -bottom-20" style="animation-delay:-7s"></div>
+                    <span class="relative z-10 inline-flex items-center gap-1.5 self-start bg-white/70 backdrop-blur px-3 py-1 rounded-full text-[10px] font-label-caps tracking-widest text-primary border border-primary/15">
+                        <span class="material-symbols-outlined text-[14px]">spa</span>NAMASTÉ
+                    </span>
+                    <h1 class="font-h1 text-4xl md:text-5xl text-primary relative z-10" id="pageTitle">Reserva tu sesión</h1>
+                    <p class="font-body-lg text-on-surface-variant max-w-2xl relative z-10">Encuentra tu ritmo. Selecciona una fecha y
+                        reserva tu espacio en nuestras clases guiadas.</p>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <aside class="md:col-span-3 flex flex-col gap-stack-md">
+                        <div
+                            class="anim-card bg-primary/5 p-6 rounded-2xl border border-primary/20 shadow-sm relative overflow-hidden" style="animation-delay:120ms">
+                            <div class="absolute -right-4 -top-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                            <h3 class="font-h3 text-xl text-navy mb-5 flex items-center gap-2 relative z-10">
+                                <span class="material-symbols-outlined text-primary">info</span>
+                                Ten en cuenta
+                            </h3>
+                            <ul class="space-y-4 text-sm font-body-md text-navy/80 relative z-10">
+                                <li class="flex gap-3 items-start">
+                                    <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">group</span>
+                                    <span>El cupo máximo es de <strong>10 personas</strong> por clase para una
+                                        experiencia más cercana.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[18px] mt-0.5">schedule</span>
+                                    <span>Puedes cancelar tu reserva hasta <strong>3 horas antes</strong> de
+                                        iniciar.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[18px] mt-0.5">event_busy</span>
+                                    <span>Si agendas una clase y no la cancelas ni asistes, se contará como
+                                        <strong>tomada</strong> y se descontará de tu paquete.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[18px] mt-0.5">self_improvement</span>
+                                    <span>Por favor llega al estudio <strong>10 minutos antes</strong> de tu
+                                        sesión.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="anim-card bg-gradient-to-br from-navy to-[#243a6b] p-6 rounded-2xl shadow-lg shadow-navy/20 text-white flex flex-col justify-center items-center text-center h-48 md:h-64 relative overflow-hidden" style="animation-delay:220ms">
+                            <div
+                                class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent">
+                            </div>
+                            <div class="orb w-32 h-32 bg-orange/25 -right-8 -bottom-10"></div>
+                            <div class="relative mb-3" style="animation: floatY 5s ease-in-out infinite">
+                                <div class="breath-ring inset-[-10px]" style="border-color: rgba(255,255,255,0.25)"></div>
+                                <div class="breath-ring inset-[-20px]" style="animation-delay:-2.5s; border-color: rgba(255,255,255,0.12)"></div>
+                                <img src="/isotipo_blanco.png" alt="Bhumi Isotipo" class="w-12 h-12 object-contain relative z-10 opacity-90">
+                            </div>
+                            <h4 class="font-h3 text-lg font-bold mb-2 relative z-10">Encuentra tu equilibrio</h4>
+                            <p class="text-xs text-white/70 font-sans tracking-wide leading-relaxed px-4 relative z-10">
+                                Un espacio dedicado a tu bienestar físico, mental y espiritual.
+                            </p>
+                        </div>
+                    </aside>
+
+                    <section class="md:col-span-9 flex flex-col gap-stack-md">
+                        <div
+                            class="anim-card flex items-center justify-between bg-white/80 backdrop-blur p-4 rounded-2xl border border-outline-variant/30 shadow-sm" style="animation-delay:80ms">
+                            <button onclick="changeWeek(-1)"
+                                class="material-symbols-outlined p-2 hover:bg-surface-container transition-all rounded-full text-on-surface-variant">chevron_left</button>
+                            <div id="dayTabs" class="flex flex-1 justify-around items-center"></div>
+                            <button onclick="changeWeek(1)"
+                                class="material-symbols-outlined p-2 hover:bg-surface-container transition-all rounded-full text-on-surface-variant">chevron_right</button>
+                        </div>
+                        <div class="flex items-center justify-between px-2">
+                            <span id="weekLabel"
+                                class="font-label-caps text-xs text-on-surface-variant tracking-widest">ESTA
+                                SEMANA</span>
+                            <span id="dayTitle" class="font-h3 text-lg text-primary">Selecciona un día</span>
+                        </div>
+                        <div id="slotsList" class="flex flex-col gap-4"></div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- VISTA MIS CLASES -->
+            <div id="tab-misclases" class="hidden flex-col gap-stack-lg">
+                <header class="anim-card flex flex-col gap-base relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage/15 via-orange/5 to-primary/10 px-6 py-9 md:px-10 -mx-6 md:mx-0 border border-white/60">
+                    <div class="orb w-48 h-48 bg-sage/25 -right-10 -top-16"></div>
+                    <div class="orb w-40 h-40 bg-orange/15 left-1/3 -bottom-20" style="animation-delay:-4s"></div>
+                    <span class="relative z-10 inline-flex items-center gap-1.5 self-start bg-white/70 backdrop-blur px-3 py-1 rounded-full text-[10px] font-label-caps tracking-widest text-primary border border-primary/15">
+                        <span class="material-symbols-outlined text-[14px]">event_available</span>TU AGENDA
+                    </span>
+                    <h1 class="font-h1 text-4xl md:text-5xl text-primary relative z-10">Mis Próximas Clases</h1>
+                    <p class="font-body-lg text-on-surface-variant relative z-10">Aquí puedes ver y gestionar las sesiones que tienes
+                        agendadas.</p>
+                </header>
+                <div id="myBookingsList" class="flex flex-col gap-4 max-w-3xl w-full mx-auto"></div>
+            </div>
+        </main>
+
+        <!-- Mobile Bottom Nav -->
+        <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-outline-variant shadow-[0_-4px_16px_rgba(0,0,0,0.05)] z-[60] pb-[env(safe-area-inset-bottom)]">
+            <div class="flex justify-around items-center p-2">
+                <button onclick="switchTab('horario')" id="nav-horario-mobile"
+                    class="flex flex-col items-center gap-1 w-1/2 p-2 text-primary transition-all">
+                    <span class="material-symbols-outlined text-[24px]">calendar_month</span>
+                    <span class="text-[10px] font-label-caps font-semibold">Horarios</span>
+                </button>
+                <button onclick="switchTab('misclases')" id="nav-misclases-mobile"
+                    class="flex flex-col items-center gap-1 w-1/2 p-2 text-on-surface-variant transition-all">
+                    <span class="material-symbols-outlined text-[24px]">list_alt</span>
+                    <span class="text-[10px] font-label-caps font-semibold">Mis Clases</span>
+                </button>
+            </div>
+        </nav>
+
+        <a href="https://demo-yoga.app" title="Volver a demo-yoga.app"
+            class="fixed left-4 bottom-20 md:bottom-6 z-[60] inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white shadow-lg shadow-navy/10 border border-outline-variant text-navy hover:text-primary hover:border-primary/30 hover:-translate-y-0.5 transition-all text-xs font-label-caps font-semibold">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            demo-yoga.app
+        </a>
+
+        <footer class="w-full mt-auto bg-navy border-t border-navy/80 pb-20 md:pb-0">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center px-8 md:px-12 py-10 gap-8 max-w-7xl mx-auto text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                    <img src="/logo.png" alt="Bhumi" class="h-10 w-auto opacity-80">
+                    <div>
+                        <span class="font-h1 font-bold text-lg text-white">Bhumi Yoga <span
+                                class="text-primary">Studio</span></span>
+                        <p class="font-sans text-[10px] uppercase tracking-[0.18em] text-white/40 mt-0.5">© 2026 ·
+                            Enraizados en la consciencia.</p>
+                    </div>
+                </div>
+
+                <!-- Contactos -->
+                <div class="flex flex-col items-center md:items-end gap-3">
+                    <span class="text-white/50 text-[10px] uppercase tracking-widest font-bold">Contáctanos</span>
+                    <div class="flex gap-3 items-center">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/demo_yoga/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:text-white transition-all cursor-pointer shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/573000000000" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-[#25D366] hover:text-white transition-all cursor-pointer shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12.031 21c-1.636 0-3.221-.42-4.63-1.218l-.333-.189-3.447.904.922-3.361-.208-.33C3.52 15.342 3 13.707 3 12.029c0-4.962 4.04-9.002 9.031-9.002 4.989 0 9.028 4.04 9.028 9.002 0 4.963-4.039 9.002-9.028 9.002zm0-16.504C7.868 4.496 4.5 7.87 4.5 12.029c0 1.34.35 2.652 1.015 3.803l.288.5-1.002 3.652 3.738-.981.547.324c1.109.658 2.378 1.005 3.682 1.005 4.161 0 7.531-3.374 7.531-7.532 0-4.159-3.37-7.533-7.531-7.533zm4.143 10.378c-.227-.114-1.344-.664-1.552-.74-.208-.076-.36-.114-.513.114-.151.228-.582.74-.714.892-.132.152-.265.171-.492.057-.227-.114-.959-.354-1.826-1.129-.675-.604-1.13-1.349-1.263-1.577-.132-.228-.014-.351.1-.465.1-.101.227-.266.34-.398.114-.133.152-.228.227-.38.076-.152.038-.285-.019-.398-.057-.114-.513-1.235-.702-1.691-.184-.443-.372-.383-.513-.39-.133-.007-.285-.007-.437-.007-.152 0-.399.057-.607.285-.208.228-.797.779-.797 1.899 0 1.12.817 2.203.931 2.355.114.152 1.606 2.451 3.893 3.438.544.234.968.374 1.298.479.547.174 1.045.149 1.436.09.438-.066 1.344-.55 1.533-1.082.189-.532.189-.988.132-1.082-.057-.095-.208-.152-.435-.266z" />
+                            </svg>
+                        </a>
+                        <!-- Teléfono -->
+                        <a href="tel:+573000000000" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-primary hover:text-white transition-all cursor-pointer shadow-sm">
+                            <span class="material-symbols-outlined text-[20px]">call</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="flex flex-col items-center md:items-end gap-2">
+                    <span class="text-white/50 text-[10px] uppercase tracking-widest font-bold">Legal</span>
+                    <div class="flex flex-wrap justify-center md:justify-end gap-x-3 gap-y-1 text-[11px] text-white/60">
+                        <a href="/privacy-policy" target="_blank" class="hover:text-white transition-colors">Política de Privacidad</a>
+                        <span class="text-white/30">·</span>
+                        <a href="/terms" target="_blank" class="hover:text-white transition-colors">Términos</a>
+                        <span class="text-white/30">·</span>
+                        <a href="/purpose" target="_blank" class="hover:text-white transition-colors">Propósito</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <!-- CONFIRM MODAL -->
+    <div class="overlay" id="confirmModal">
+        <div class="anim-pop bg-white rounded-3xl p-8 w-full max-w-sm shadow-2xl border border-outline-variant/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/15 to-orange/15 flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-primary text-[28px]">self_improvement</span>
+            </div>
+            <h3 id="modalTitle" class="font-h3 text-2xl text-primary mb-4">Confirmar</h3>
+            <p id="modalBody" class="font-body-md text-on-surface-variant mb-8">¿Deseas realizar esta acción?</p>
+            <div class="flex gap-3 justify-end">
+                <button onclick="closeModal()"
+                    class="px-6 py-2 rounded-xl font-label-caps text-xs text-on-surface-variant hover:bg-surface-container transition-all">CANCELAR</button>
+                <button id="modalConfirmBtn" onclick="confirmModalAction()"
+                    class="px-6 py-2 rounded-xl bg-primary text-white font-label-caps text-xs shadow-md hover:opacity-90 transition-all">CONFIRMAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALENDAR MODAL (segundo paso, opcional) -->
+    <div class="overlay" id="calendarModal" style="z-index:300;">
+        <div class="anim-pop bg-white rounded-3xl p-8 w-full max-w-sm shadow-2xl border border-outline-variant/20">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="material-symbols-outlined text-primary text-[28px]">calendar_month</span>
+                <h3 class="font-h3 text-xl text-primary">¿Agregar a Google Calendar?</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant mb-1">Tu clase ya está guardada en Bhumi.</p>
+            <p class="font-body-md text-on-surface-variant mb-8">¿Quieres recibir un recordatorio <strong>2 horas antes</strong> en tu Google Calendar?</p>
+            <div class="flex gap-3 justify-end">
+                <button onclick="calendarModalNo()"
+                    class="px-6 py-2 rounded-xl font-label-caps text-xs text-on-surface-variant hover:bg-surface-container transition-all">NO, GRACIAS</button>
+                <button onclick="calendarModalYes()"
+                    class="flex items-center gap-2 px-6 py-2 rounded-xl bg-primary text-white font-label-caps text-xs shadow-md hover:opacity-90 transition-all">
+                    <span class="material-symbols-outlined text-[16px]">event_available</span>SÍ, AGREGAR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════ FIREBASE ══════════════ -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import {
+            getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged,
+            GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+        import { getFirestore, collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, where, orderBy, serverTimestamp, increment, setDoc, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "DEMO_FIREBASE_API_KEY",
+            authDomain: "bhumi-demo.firebaseapp.com",
+            projectId: "bhumi-demo",
+            storageBucket: "bhumi-demo.appspot.com",
+            messagingSenderId: "000000000000",
+            appId: "1:000000000000:web:fa292749634c56d49ba97c",
+            measurementId: "G-DEMO000000"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        window._auth = auth;
+        window._db = db;
+        window._fs = { collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, where, orderBy, serverTimestamp, increment, setDoc, runTransaction };
+        window._googleAccessToken = sessionStorage.getItem('gat') || null;
+
+        onAuthStateChanged(auth, async (user) => {
+            document.getElementById('loadingBar').style.display = 'none';
+            if (user) {
+                window._currentUser = user;
+                window._loginProvider = user.providerData[0]?.providerId || 'password';
+                try {
+                    const profSnap = await getDoc(doc(db, 'userProfiles', user.uid));
+                    window._userName = profSnap.exists()
+                        ? profSnap.data().name
+                        : (user.displayName || user.email?.split('@')[0] || user.phoneNumber || 'Usuario');
+                } catch {
+                    window._userName = user.displayName || user.email?.split('@')[0] || user.phoneNumber || 'Usuario';
+                }
+                document.getElementById('loginScreen').classList.add('hidden');
+                document.getElementById('appScreen').classList.remove('hidden');
+                document.getElementById('appScreen').classList.add('flex');
+                document.getElementById('userPill').textContent = window._userName;
+                const icon   = document.getElementById('userProviderIcon');
+                const avatar = document.getElementById('userAvatar');
+                if (window._loginProvider === 'google.com' && user.photoURL) {
+                    avatar.src = user.photoURL;
+                    avatar.classList.remove('hidden');
+                    icon.classList.add('hidden');
+                } else {
+                    avatar.classList.add('hidden');
+                    icon.classList.remove('hidden');
+                    icon.textContent = 'account_circle';
+                }
+                initApp();
+                adjustMainMargin();
+                loadStudentData();
+            } else {
+                window._currentUser = null;
+                window._loginProvider = null;
+                window._googleAccessToken = null;
+                sessionStorage.removeItem('gat');
+                document.getElementById('loginScreen').classList.remove('hidden');
+                document.getElementById('appScreen').classList.add('hidden');
+                document.getElementById('appScreen').classList.remove('flex');
+                if (window._unsubBookings) { window._unsubBookings(); window._unsubBookings = null; }
+            }
+        });
+
+        /* ── Email / password ── */
+        window.doLogin = async function () {
+            const email = document.getElementById('loginEmail').value.trim();
+            const pass = document.getElementById('loginPass').value;
+            const btn = document.getElementById('loginBtn');
+            const err = document.getElementById('loginError');
+            err.classList.add('hidden');
+            if (!email || !pass) { err.textContent = 'Completa todos los campos.'; err.classList.remove('hidden'); return; }
+            btn.disabled = true; btn.textContent = 'ENTRANDO...';
+            try { await signInWithEmailAndPassword(auth, email, pass); }
+            catch (e) { err.textContent = authMsg(e.code); err.classList.remove('hidden'); }
+            finally { btn.disabled = false; btn.textContent = 'ENTRAR'; }
+        };
+
+        window.doRegister = async function () {
+            const name = document.getElementById('regName').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const pass = document.getElementById('regPass').value;
+            const btn = document.getElementById('regBtn');
+            const err = document.getElementById('regError');
+            err.classList.add('hidden');
+            if (!name || !email || !pass) { err.textContent = 'Completa todos los campos.'; err.classList.remove('hidden'); return; }
+            btn.disabled = true; btn.textContent = 'CREANDO...';
+            try {
+                const cred = await createUserWithEmailAndPassword(auth, email, pass);
+                await setDoc(doc(db, 'userProfiles', cred.user.uid), { name, email, createdAt: serverTimestamp(), role: 'student', provider: 'email' });
+            } catch (e) { err.textContent = authMsg(e.code); err.classList.remove('hidden'); }
+            finally { btn.disabled = false; btn.textContent = 'CREAR CUENTA'; }
+        };
+
+        window.doLogout = async function () { await signOut(auth); };
+
+        /* ── Google Sign-In ── */
+        // Safari/mobile no soporta popups con COOP — usamos redirect en esos casos
+        const isMobileSafari = /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+            (/Safari/i.test(navigator.userAgent) && !/Chrome/i.test(navigator.userAgent));
+
+        async function ensureGoogleProfile(user) {
+            const profRef = doc(db, 'userProfiles', user.uid);
+            const profSnap = await getDoc(profRef);
+            if (!profSnap.exists()) {
+                await setDoc(profRef, {
+                    name: user.displayName || 'Usuario',
+                    email: user.email,
+                    createdAt: serverTimestamp(),
+                    role: 'student',
+                    provider: 'google'
+                });
+            }
+        }
+
+        // Manejar resultado del redirect al volver de Google (mobile/Safari)
+        getRedirectResult(auth).then(async result => {
+            if (result?.user) await ensureGoogleProfile(result.user);
+        }).catch(() => {});
+
+        window.doGoogleLogin = async function () {
+            const btn = document.getElementById('googleBtn');
+            const err = document.getElementById('socialError');
+            err.classList.add('hidden');
+            const origHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.textContent = 'Conectando con Google...';
+            const provider = new GoogleAuthProvider();
+            try {
+                if (isMobileSafari) {
+                    // Redirect — la página se recarga, el resultado lo maneja getRedirectResult
+                    await signInWithRedirect(auth, provider);
+                } else {
+                    const result = await signInWithPopup(auth, provider);
+                    await ensureGoogleProfile(result.user);
+                }
+            } catch (e) {
+                if (e.code !== 'auth/popup-closed-by-user' && e.code !== 'auth/cancelled-popup-request') {
+                    err.textContent = 'No se pudo iniciar sesión con Google. Intenta de nuevo.';
+                    err.classList.remove('hidden');
+                }
+                btn.disabled = false; btn.innerHTML = origHtml;
+            }
+        };
+
+        /* ── Solicitar acceso a Google Calendar (scope sensible, popup separado) ── */
+        window.requestCalendarAccess = async function () {
+            if (window._googleAccessToken) return true;
+            if (window._loginProvider !== 'google.com') return false;
+            const provider = new GoogleAuthProvider();
+            provider.addScope('https://www.googleapis.com/auth/calendar.events');
+            try {
+                const result = await signInWithPopup(auth, provider);
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                window._googleAccessToken = credential.accessToken;
+                sessionStorage.setItem('gat', credential.accessToken);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        };
+
+        function authMsg(code) {
+            const m = {
+                'auth/wrong-password': 'Contraseña incorrecta.',
+                'auth/invalid-credential': 'Credenciales inválidas.',
+                'auth/invalid-email': 'Correo inválido.',
+                'auth/email-already-in-use': 'El correo ya está en uso.',
+                'auth/weak-password': 'La contraseña debe tener al menos 6 caracteres.',
+                'auth/user-not-found': 'No existe una cuenta con este correo.'
+            };
+            return m[code] || 'Error en autenticación. Intenta de nuevo.';
+        }
+    </script>
+
+    <!-- ══════════════ LÓGICA APP ══════════════ -->
+    <script>
+        // Horario semanal: 1=Lunes ... 6=Sábado
+        const SCHEDULE = {
+            1: ['7:00 am', '8:15 am', '6:00 pm', '7:15 pm'],
+            2: ['7:00 am', '8:15 am', '4:45 pm', '6:00 pm', '7:15 pm'],
+            3: ['7:00 am', '8:15 am', '6:00 pm', '7:15 pm'],
+            4: ['7:00 am', '8:15 am', '4:45 pm', '6:00 pm', '7:15 pm'],
+            5: ['7:00 am', '8:15 am'],
+            6: ['8:00 am'],
+        };
+        // Programa por día y horario (1=Lunes ... 6=Sábado)
+        const PROGRAM_FOR_SLOT = {
+            1: { '7:00 am': 'Hatha Yoga intermedio', '8:15 am': 'Yoga para principiantes', '6:00 pm': 'Meditación', '7:15 pm': 'Yoga multinivel' },
+            2: { '7:00 am': 'Hatha Yoga intermedio', '8:15 am': 'Yoga terapéutico', '4:45 pm': 'Yoga terapéutico', '6:00 pm': 'Vinyasa yoga', '7:15 pm': 'Yoga multinivel' },
+            3: { '7:00 am': 'Hatha Yoga intermedio', '8:15 am': 'Yoga terapéutico', '6:00 pm': 'Yoga multinivel', '7:15 pm': 'Yoga multinivel' },
+            4: { '7:00 am': 'Hatha Yoga intermedio', '8:15 am': 'Yoga terapéutico', '4:45 pm': 'Yoga terapéutico', '6:00 pm': 'Yoga para principiantes', '7:15 pm': 'Hatha Yoga intermedio' },
+            5: { '7:00 am': 'Hatha Yoga intermedio', '8:15 am': 'Yoga para principiantes' },
+            6: { '8:00 am': 'Yoga multinivel' },
+        };
+        // Icono por tipo de programa (tema wellness, sin pesas/instructores)
+        const PROGRAM_ICON = {
+            'Hatha Yoga intermedio': 'sports_gymnastics',
+            'Yoga para principiantes': 'spa',
+            'Yoga terapéutico': 'eco',
+            'Meditación': 'self_improvement',
+            'Vinyasa yoga': 'waves',
+            'Yoga multinivel': 'groups',
+        };
+        // Descripción corta por tipo de programa
+        const PROGRAM_DESC = {
+            'Hatha Yoga intermedio': 'Posturas dinámicas para fortalecer el cuerpo y mejorar el equilibrio.',
+            'Yoga para principiantes': 'Clase suave para iniciarte en el yoga, ideal si es tu primera vez.',
+            'Yoga terapéutico': 'Movimientos conscientes enfocados en aliviar dolencias y recuperar el cuerpo.',
+            'Meditación': 'Espacio de respiración y meditación para calmar la mente.',
+            'Vinyasa yoga': 'Secuencias fluidas que conectan respiración y movimiento.',
+            'Yoga multinivel': 'Clase para todos los niveles, ideal para construir una práctica constante.',
+        };
+        const DAY_SHORT = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
+        const DAY_FULL = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        const MAX_SPOTS = 10;
+
+        let weekOffset = 0, selectedDow = null, selectedDate = null, myBookings = [], slotsData = {}, pendingAction = null;
+        // Mapa 'YYYY-MM-DD' -> nombre del festivo (Colombia)
+        const HOLIDAYS = new Map();
+
+        // Carga los festivos de Colombia (año actual y siguiente) desde Nager.Date,
+        // con cache en localStorage para no repetir la consulta en cada visita.
+        async function loadHolidays() {
+            const currentYear = new Date().getFullYear();
+            for (const year of [currentYear, currentYear + 1]) {
+                const cacheKey = `bhumi_holidays_co_${year}`;
+                try {
+                    const cached = localStorage.getItem(cacheKey);
+                    if (cached) {
+                        JSON.parse(cached).forEach(h => HOLIDAYS.set(h.date, h.localName));
+                        continue;
+                    }
+                    const res = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${year}/CO`);
+                    if (!res.ok) continue;
+                    const data = await res.json();
+                    localStorage.setItem(cacheKey, JSON.stringify(data));
+                    data.forEach(h => HOLIDAYS.set(h.date, h.localName));
+                } catch (e) { console.error('No se pudieron cargar los festivos', e); }
+            }
+        }
+
+        // Returns YYYY-MM-DD for today in Colombia (America/Bogota, UTC-5)
+        function today() { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Bogota' }); }
+        // Adds n days to a YYYY-MM-DD string using UTC arithmetic (timezone-safe)
+        function addDays(date, n) {
+            const [y, m, d] = date.split('-').map(Number);
+            const dt = new Date(Date.UTC(y, m - 1, d));
+            dt.setUTCDate(dt.getUTCDate() + n);
+            return dt.toISOString().split('T')[0];
+        }
+        // Returns Monday YYYY-MM-DD for the week containing today (in Bogota) + offset weeks
+        function mondayOfWeek(offset) {
+            const todayStr = today();
+            const [y, m, d] = todayStr.split('-').map(Number);
+            const dt = new Date(Date.UTC(y, m - 1, d));
+            const dow = dt.getUTCDay() === 0 ? 6 : dt.getUTCDay() - 1;
+            dt.setUTCDate(dt.getUTCDate() - dow + offset * 7);
+            return dt.toISOString().split('T')[0];
+        }
+        function dateOfDow(monday, dow) { return addDays(monday, dow - 1); }
+        function fmtDate(dateStr) { if (!dateStr) return ''; const [y, m, d] = dateStr.split('-'); return `${d}/${m}/${y}`; }
+        function slotKey(dateStr, hora) { return `${dateStr}__${hora}`; }
+
+        function initApp() {
+            // Use Bogota date for "today" day-of-week
+            const todayStr = today();
+            const [y, m, d] = todayStr.split('-').map(Number);
+            const dowToday = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+            const todayDow = dowToday === 0 ? 1 : dowToday;
+            selectedDow = SCHEDULE[todayDow] ? todayDow : 1;
+            selectedDate = dateOfDow(mondayOfWeek(0), selectedDow);
+            buildDayTabs();
+            loadWeekData();
+            loadHolidays().then(() => { buildDayTabs(); renderSlotsForDay(); });
+            subscribeMyBookings();
+        }
+
+        window.switchTab = function (tab) {
+            document.getElementById('tab-horario').classList.toggle('hidden', tab !== 'horario');
+            document.getElementById('tab-misclases').classList.toggle('hidden', tab !== 'misclases');
+            // Animación de entrada de la vista activa
+            const activeView = document.getElementById(tab === 'horario' ? 'tab-horario' : 'tab-misclases');
+            activeView.classList.remove('view-enter');
+            void activeView.offsetWidth; // reinicia la animación
+            activeView.classList.add('view-enter');
+            document.getElementById('nav-horario').className = tab === 'horario' ? 'px-5 py-2 rounded-full bg-primary text-white font-semibold transition-all shadow-sm' : 'px-5 py-2 rounded-full text-navy/60 hover:text-navy font-medium transition-all';
+            document.getElementById('nav-misclases').className = tab === 'misclases' ? 'px-5 py-2 rounded-full bg-primary text-white font-semibold transition-all shadow-sm' : 'px-5 py-2 rounded-full text-navy/60 hover:text-navy font-medium transition-all';
+            
+            const mHorario = document.getElementById('nav-horario-mobile');
+            if (mHorario) mHorario.className = tab === 'horario' ? 'flex flex-col items-center gap-1 w-1/2 p-2 text-primary transition-all' : 'flex flex-col items-center gap-1 w-1/2 p-2 text-on-surface-variant hover:text-navy transition-all';
+            const mMis = document.getElementById('nav-misclases-mobile');
+            if (mMis) mMis.className = tab === 'misclases' ? 'flex flex-col items-center gap-1 w-1/2 p-2 text-primary transition-all' : 'flex flex-col items-center gap-1 w-1/2 p-2 text-on-surface-variant hover:text-navy transition-all';
+            if (tab === 'misclases') renderMyBookings();
+        };
+
+        window.changeWeek = function (dir) {
+            weekOffset += dir;
+            selectedDate = dateOfDow(mondayOfWeek(weekOffset), selectedDow);
+            buildDayTabs();
+            updateWeekLabel();
+            loadWeekData();
+        };
+
+        function updateWeekLabel() {
+            const mon = mondayOfWeek(weekOffset);
+            const sat = addDays(mon, 5);
+            document.getElementById('weekLabel').textContent = weekOffset === 0 ? 'ESTA SEMANA' : weekOffset === 1 ? 'PRÓXIMA SEMANA' : `${fmtDate(mon)} - ${fmtDate(sat)}`;
+        }
+
+        function buildDayTabs() {
+            const mon = mondayOfWeek(weekOffset);
+            const container = document.getElementById('dayTabs');
+            container.innerHTML = '';
+            [1, 2, 3, 4, 5, 6].forEach(dow => {
+                const date = dateOfDow(mon, dow);
+                const isSelected = dow === selectedDow;
+                const isTodayTab = date === today();
+                const holidayName = HOLIDAYS.get(date);
+                const btn = document.createElement('button');
+                btn.title = holidayName ? `Festivo: ${holidayName}` : '';
+                btn.className = `relative flex flex-col items-center px-3 py-2.5 md:px-4 rounded-2xl transition-all duration-300 ${isSelected ? 'bg-gradient-to-b from-primary to-[#b54530] text-white shadow-lg shadow-primary/30 ring-4 ring-primary/10 scale-105' : holidayName ? 'bg-amber-50 text-amber-700 hover:-translate-y-0.5' : 'hover:bg-surface-container hover:-translate-y-0.5 text-on-surface-variant'}`;
+                btn.innerHTML = `
+                    <span class="font-label-caps text-[10px] mb-1 ${isSelected ? 'text-white/80' : ''}">${DAY_SHORT[dow]}</span>
+                    <span class="font-h3 text-xl">${date.split('-')[2]}</span>
+                    ${holidayName ? `<span class="material-symbols-outlined text-[12px] ${isSelected ? 'text-white' : 'text-amber-600'}">event_busy</span>` : ''}
+                    ${isTodayTab ? `<span class="absolute -bottom-0.5 w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-white' : 'bg-orange'}"></span>` : ''}`;
+                btn.onclick = () => { selectedDow = dow; selectedDate = date; buildDayTabs(); renderSlotsForDay(); };
+                container.appendChild(btn);
+            });
+            updateWeekLabel();
+        }
+
+        function showSlotsSkeleton() {
+            const list = document.getElementById('slotsList');
+            if (!list) return;
+            list.innerHTML = [0, 1, 2].map(i => `
+                <div class="skeleton h-36 w-full" style="animation-delay:${i * 120}ms"></div>`).join('');
+        }
+
+        async function loadWeekData() {
+            const { collection, query, where, getDocs } = window._fs;
+            const db = window._db;
+            showSlotsSkeleton();
+            const mon = mondayOfWeek(weekOffset);
+            const sat = addDays(mon, 5);
+            try {
+                const snap = await getDocs(query(collection(db, 'agendamientos'), where('fecha', '>=', mon), where('fecha', '<=', sat), where('estado', '==', 'activo')));
+                slotsData = {};
+                snap.forEach(d => {
+                    const { fecha, hora, userId } = d.data();
+                    const key = slotKey(fecha, hora);
+                    if (!slotsData[key]) slotsData[key] = { count: 0, myBookingId: null };
+                    slotsData[key].count++;
+                    if (userId === window._currentUser?.uid) slotsData[key].myBookingId = d.id;
+                });
+            } catch (e) { console.error(e); }
+            renderSlotsForDay();
+        }
+
+        function subscribeMyBookings() {
+            const { collection, query, where, onSnapshot } = window._fs;
+            if (!window._currentUser) return;
+            if (window._unsubBookings) window._unsubBookings();
+            window._unsubBookings = onSnapshot(
+                query(collection(window._db, 'agendamientos'), where('userId', '==', window._currentUser.uid), where('estado', '==', 'activo')),
+                snap => {
+                    myBookings = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+                    renderSlotsForDay();
+                    renderMyBookings();
+                }
+            );
+        }
+
+        function renderSlotsForDay() {
+            const list = document.getElementById('slotsList');
+            const slots = SCHEDULE[selectedDow] || [];
+            const d = new Date(selectedDate + 'T12:00:00');
+            document.getElementById('dayTitle').textContent = `${DAY_FULL[selectedDow]}, ${d.getDate()} de ${['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'][d.getMonth()]}`;
+
+            const holidayName = HOLIDAYS.get(selectedDate);
+            if (holidayName) {
+                list.innerHTML = `
+                <div class="anim-card bg-white p-12 rounded-3xl text-center border border-dashed border-amber-300/60">
+                    <div class="relative inline-block mb-4" style="animation: floatY 5s ease-in-out infinite">
+                        <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl text-amber-600">event_busy</span>
+                        </div>
+                    </div>
+                    <p class="text-on-surface font-h3 text-lg mb-1">Día festivo</p>
+                    <p class="text-on-surface-variant font-body-md text-sm">${holidayName} · no hay clases programadas este día.</p>
+                </div>`;
+                return;
+            }
+
+            if (!slots.length) {
+                list.innerHTML = `
+                <div class="anim-card bg-white p-12 rounded-3xl text-center border border-dashed border-outline-variant/50">
+                    <div class="relative inline-block mb-4" style="animation: floatY 5s ease-in-out infinite">
+                        <div class="breath-ring inset-[-10px]"></div>
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-sage/15 to-primary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl text-sage">spa</span>
+                        </div>
+                    </div>
+                    <p class="text-on-surface font-h3 text-lg mb-1">Día de descanso</p>
+                    <p class="text-on-surface-variant font-body-md text-sm">No hay clases programadas para este día.</p>
+                </div>`;
+                return;
+            }
+
+            list.innerHTML = '';
+            const isPast = selectedDate < today();
+            const isToday = selectedDate === today();
+
+            slots.forEach((hora, slotIdx) => {
+                const key = slotKey(selectedDate, hora);
+                const data = slotsData[key] || { count: 0, myBookingId: null };
+                const isBooked = myBookings.some(b => b.fecha === selectedDate && b.hora === hora);
+                const bookingId = myBookings.find(b => b.fecha === selectedDate && b.hora === hora)?.id;
+                const isFull = data.count >= MAX_SPOTS;
+                const prog = (PROGRAM_FOR_SLOT[selectedDow] && PROGRAM_FOR_SLOT[selectedDow][hora]) || 'Yoga';
+                const pct = Math.round((data.count / MAX_SPOTS) * 100);
+                const [hm, ampm] = hora.split(' ');
+
+                // Detectar si la hora ya pasó hoy
+                const isHourPast = isToday && (() => {
+                    const { h, m } = _parseHora(hora);
+                    const slotTime = new Date(); slotTime.setHours(h, m, 0, 0);
+                    return new Date() > slotTime;
+                })();
+
+                const card = document.createElement('div');
+                card.className = `slot-card anim-card bg-white p-6 rounded-3xl shadow-sm border flex flex-col md:flex-row gap-6 items-center relative overflow-hidden ${isBooked ? 'border-secondary/40 ring-2 ring-secondary/20' : 'border-outline-variant/20'} ${isHourPast && !isBooked ? 'opacity-60' : ''}`;
+                card.style.animationDelay = `${slotIdx * 70}ms`;
+
+                let actionBtn = isPast
+                    ? `<button disabled class="w-full bg-surface-container-high text-on-surface-variant py-3 rounded-xl font-label-caps text-xs cursor-not-allowed">PASADA</button>`
+                    : (isHourPast && !isBooked)
+                        ? `<button disabled class="w-full bg-surface-container text-on-surface-variant py-3 rounded-xl font-label-caps text-xs cursor-not-allowed text-center leading-tight">Horario no disponible · Agenda el próximo</button>`
+                        : isBooked
+                        ? `<button onclick="askCancel('${key}','${hora}','${prog}','${bookingId}')" class="w-full bg-surface-container-highest text-on-surface py-3 rounded-xl font-label-caps text-xs hover:bg-error/10 hover:text-error transition-all duration-300">CANCELAR</button>`
+                        : isFull
+                            ? `<button disabled class="w-full bg-surface-container text-on-surface-variant py-3 rounded-xl font-label-caps text-xs cursor-not-allowed">LLENA</button>`
+                            : `<button onclick="askBook('${key}','${hora}','${prog}')" class="group w-full bg-gradient-to-r from-primary to-[#e06a42] text-on-primary py-3 rounded-xl font-label-caps text-xs shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-1.5">AGENDAR<span class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span></button>`;
+
+                const progIcon = PROGRAM_ICON[prog] || 'self_improvement';
+                const spotsLeft = MAX_SPOTS - data.count;
+                const almostFull = !isFull && spotsLeft <= 3 && !isPast && !isHourPast;
+
+                card.innerHTML = `
+                ${isBooked ? '<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-secondary to-sage"></div>' : ''}
+                <div class="flex flex-row items-center justify-start md:justify-center gap-3 md:gap-0 md:flex-col md:border-r border-outline-variant/20 md:pr-8 min-w-[110px] w-full md:w-auto">
+                    <div class="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-br ${isBooked ? 'from-secondary/15 to-sage/20' : 'from-primary/10 to-orange/15'} flex items-center justify-center md:mb-2">
+                        <span class="material-symbols-outlined ${isBooked ? 'text-secondary' : 'text-primary'} text-[26px]">${progIcon}</span>
+                    </div>
+                    <div class="flex flex-row items-baseline gap-1.5 md:flex-col md:items-center">
+                        <span class="font-h3 text-2xl text-primary leading-none">${hm}</span>
+                        <span class="font-label-caps text-[10px] text-on-surface-variant md:mt-1">${ampm}</span>
+                    </div>
+                </div>
+                <div class="flex-grow w-full">
+                    <div class="flex items-center gap-3 mb-1 flex-wrap">
+                        <h2 class="font-h2 text-xl text-on-surface">${prog}</h2>
+                        ${isBooked ? '<span class="inline-flex items-center gap-1 bg-secondary/10 text-secondary px-2.5 py-1 rounded-full text-[9px] font-bold tracking-wider"><span class="material-symbols-outlined text-[12px]">check_circle</span>RESERVADA</span>' : ''}
+                        ${almostFull ? `<span class="inline-flex items-center gap-1 bg-amber-50 text-amber-600 px-2.5 py-1 rounded-full text-[9px] font-bold tracking-wider border border-amber-200"><span class="material-symbols-outlined text-[12px]">local_fire_department</span>¡QUEDAN ${spotsLeft}!</span>` : ''}
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-4">${PROGRAM_DESC[prog] || 'Clase multinivel para armonizar cuerpo y mente.'}</p>
+                    <div class="flex flex-col gap-1.5 max-w-xs">
+                        <div class="flex justify-between text-[10px] font-medium text-on-surface-variant">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">group</span>${data.count}/${MAX_SPOTS} LUGARES</span>
+                            <span>${pct}%</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-primary to-orange rounded-full relative overflow-hidden transition-all duration-700 ease-out" style="width:${pct}%">
+                                ${pct > 0 && pct < 100 ? '<div class="bar-shine"></div>' : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[150px] w-full md:w-auto">${actionBtn}</div>
+            `;
+                list.appendChild(card);
+            });
+        }
+
+        // Etiqueta de proximidad: HOY / MAÑANA / EN N DÍAS
+        function daysUntilLabel(fecha) {
+            const t = today();
+            if (fecha === t) return { text: 'HOY', cls: 'bg-primary/10 text-primary border-primary/20' };
+            if (fecha === addDays(t, 1)) return { text: 'MAÑANA', cls: 'bg-orange/10 text-[#c97a36] border-orange/30' };
+            const diff = Math.round((new Date(fecha + 'T12:00:00') - new Date(t + 'T12:00:00')) / 86400000);
+            return { text: `EN ${diff} DÍAS`, cls: 'bg-sage/10 text-sage border-sage/30' };
+        }
+
+        const MONTH_SHORT = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+        function renderMyBookings() {
+            const container = document.getElementById('myBookingsList');
+            const future = myBookings.filter(b => b.fecha >= today()).sort((a, b) => (a.fecha + a.hora).localeCompare(b.fecha + b.hora));
+            if (!future.length) {
+                container.innerHTML = `
+                <div class="anim-card bg-white p-12 rounded-3xl text-center border border-dashed border-outline-variant/50 relative overflow-hidden">
+                    <div class="orb w-40 h-40 bg-sage/15 -right-10 -top-10"></div>
+                    <div class="relative inline-block mb-4" style="animation: floatY 5s ease-in-out infinite">
+                        <div class="breath-ring inset-[-10px]"></div>
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-orange/15 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-3xl text-primary">self_improvement</span>
+                        </div>
+                    </div>
+                    <p class="text-on-surface font-h3 text-lg mb-1">Tu agenda está en calma</p>
+                    <p class="text-on-surface-variant font-body-md text-sm mb-6">No tienes clases agendadas próximamente.</p>
+                    <button onclick="switchTab('horario')" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-[#e06a42] text-white px-6 py-3 rounded-xl font-label-caps text-xs shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                        <span class="material-symbols-outlined text-[16px]">calendar_month</span>EXPLORAR HORARIOS
+                    </button>
+                </div>`;
+                return;
+            }
+            container.innerHTML = future.map((b, i) => {
+                const d = new Date(b.fecha + 'T12:00:00');
+                const when = daysUntilLabel(b.fecha);
+                return `
+            <div class="slot-card anim-card bg-white p-5 md:p-6 rounded-3xl shadow-sm border border-outline-variant/20 flex justify-between items-center gap-4 relative overflow-hidden" style="animation-delay:${i * 80}ms">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-orange"></div>
+                <div class="flex gap-4 items-center min-w-0">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-orange/15 flex flex-col items-center justify-center shrink-0">
+                        <span class="font-h3 text-xl text-primary leading-none">${d.getDate()}</span>
+                        <span class="font-label-caps text-[9px] text-on-surface-variant tracking-wider">${MONTH_SHORT[d.getMonth()]}</span>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-2 flex-wrap mb-0.5">
+                            <h4 class="font-h3 text-lg text-on-surface truncate">${b.programa}</h4>
+                            <span class="text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full border ${when.cls}">${when.text}</span>
+                        </div>
+                        <p class="font-body-md text-sm text-on-surface-variant flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-[15px]">schedule</span>${DAY_FULL[d.getDay()]} ${fmtDate(b.fecha)} · ${b.hora}
+                        </p>
+                    </div>
+                </div>
+                <button onclick="askCancel('${slotKey(b.fecha, b.hora)}','${b.hora}','${b.programa}','${b.id}')" class="shrink-0 text-xs font-label-caps text-on-surface-variant px-4 py-2 rounded-xl hover:bg-error/10 hover:text-error transition-all duration-300">CANCELAR</button>
+            </div>`;
+            }).join('');
+        }
+
+        window.askBook = function (key, hora, prog) {
+            const state = getPackState();
+            if (state.type === 'exhausted') {
+                window.open(WA_PACK_URL, '_blank', 'noopener');
+                return;
+            }
+            const [fecha] = key.split('__');
+            pendingAction = { type: 'book', key, fecha, hora, prog };
+            document.getElementById('modalTitle').textContent = 'Agendar clase';
+            document.getElementById('modalBody').innerHTML = `¿Confirmas tu lugar en <strong>${prog}</strong> el <strong>${fmtDate(fecha)}</strong> a las <strong>${hora}</strong>?`;
+            document.getElementById('confirmModal').classList.add('open');
+        };
+        window.askCancel = function (key, hora, prog, bookingId) {
+            const [fecha] = key.split('__');
+            pendingAction = { type: 'cancel', key, fecha, hora, prog, bookingId };
+            document.getElementById('modalTitle').textContent = 'Cancelar clase';
+            document.getElementById('modalBody').innerHTML = `¿Seguro que quieres cancelar tu reserva para <strong>${prog}</strong>?`;
+            document.getElementById('confirmModal').classList.add('open');
+        };
+        window.closeModal = function () { document.getElementById('confirmModal').classList.remove('open'); pendingAction = null; };
+        window.confirmModalAction = async function () { const action = pendingAction; closeModal(); if (!action) return; if (action.type === 'book') await doBook(action); else await doCancel(action); };
+
+        /* ── Google Calendar ── */
+        function _parseHora(hora) {
+            const [hm, ampm] = hora.split(' ');
+            let [h, m] = hm.split(':').map(Number);
+            if (ampm === 'pm' && h !== 12) h += 12;
+            if (ampm === 'am' && h === 12) h = 0;
+            return { h, m };
+        }
+
+        // Devuelve { htmlLink, eventId } o null si falla
+        async function addToGoogleCalendar(fecha, hora, programa) {
+            const token = window._googleAccessToken;
+            if (!token) return null;
+            try {
+                const { h, m } = _parseHora(hora);
+                const pad = n => String(n).padStart(2, '0');
+                const totalEnd = h * 60 + m + 75;
+                const endH = Math.floor(totalEnd / 60) % 24;
+                const endM = totalEnd % 60;
+
+                const event = {
+                    summary: `Bhumi Yoga · ${programa}`,
+                    location: 'Bhumi Yoga Academy',
+                    description: `Clase reservada: ${programa}.\n\nRecuerda llegar 10 minutos antes de tu sesión.\n\nBhumi Yoga Studio & Academy`,
+                    start: { dateTime: `${fecha}T${pad(h)}:${pad(m)}:00-05:00`, timeZone: 'America/Bogota' },
+                    end:   { dateTime: `${fecha}T${pad(endH)}:${pad(endM)}:00-05:00`, timeZone: 'America/Bogota' },
+                    reminders: {
+                        useDefault: false,
+                        overrides: [
+                            { method: 'popup', minutes: 120 }
+                        ]
+                    }
+                };
+
+                const res = await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify(event)
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    return { htmlLink: data.htmlLink, eventId: data.id };
+                }
+                if (res.status === 401) { window._googleAccessToken = null; sessionStorage.removeItem('gat'); }
+                return null;
+            } catch (e) { console.error('Google Calendar add:', e); return null; }
+        }
+
+        async function removeFromGoogleCalendar(calEventId) {
+            const token = window._googleAccessToken;
+            if (!token || !calEventId) return;
+            try {
+                await fetch(`https://www.googleapis.com/calendar/v3/calendars/primary/events/${calEventId}`, {
+                    method: 'DELETE',
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+            } catch (e) { console.warn('Google Calendar delete:', e); }
+        }
+
+        // Enlace prefabricado para usuarios que NO iniciaron sesión con Google
+        function buildCalendarLink(fecha, hora, programa) {
+            const { h, m } = _parseHora(hora);
+            const pad = n => String(n).padStart(2, '0');
+            const totalEnd = h * 60 + m + 75;
+            const endH = Math.floor(totalEnd / 60) % 24;
+            const endM = totalEnd % 60;
+            const [yr, mo, dy] = fecha.split('-').map(Number);
+            const toUTC = (hh, mm) => `${yr}${pad(mo)}${pad(dy)}T${pad((hh + 5) % 24)}${pad(mm)}00Z`;
+            const params = new URLSearchParams({
+                action: 'TEMPLATE',
+                text: `Bhumi Yoga · ${programa}`,
+                dates: `${toUTC(h, m)}/${toUTC(endH, endM)}`,
+                details: `Clase reservada: ${programa}.\n\nRecuerda llegar 10 minutos antes.\n\nBhumi Yoga Studio & Academy`,
+                location: 'Bhumi Yoga Academy',
+                ctz: 'America/Bogota',
+            });
+            return `https://calendar.google.com/calendar/render?${params.toString()}`;
+        }
+
+        // ── Paquete del estudiante ────────────────────────────────────────────────
+        const WA_NUMBER = '573000000000';
+        const WA_PACK_URL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hola! Quiero agendar un paquete de clases en Bhumi Yoga Studio 🧘')}`;
+
+        // Carga los datos del estudiante desde la colección 'students' buscando por email.
+        // Si no existe, verifica si ya usó su clase de cortesía.
+        // Normaliza un nombre para comparación: minúsculas, sin tildes, sin espacios extra
+        function normalizeName(s) {
+            return (s || '').toLowerCase()
+                .normalize('NFD').replace(/[̀-ͯ]/g, '')
+                .replace(/\s+/g, ' ').trim();
+        }
+
+        async function loadStudentData() {
+            const { collection, query, where, getDocs } = window._fs;
+            const email = window._currentUser?.email;
+            const userName = window._userName || '';
+            window._packInfo = null;
+
+            try {
+                // 1. Buscar por email (usuarios nuevos que ya tienen email vinculado)
+                if (email) {
+                    const snap = await getDocs(query(collection(window._db, 'students'), where('email', '==', email)));
+                    if (!snap.empty) {
+                        const d = snap.docs[0].data();
+                        window._packInfo = { found: true, pack: d.pack || 0, fechas: d.fechas || [], fin: d.fin || null };
+                        renderPackBadge();
+                        return;
+                    }
+                }
+
+                // 2. Buscar por nombre normalizado (usuarios existentes sin email registrado)
+                const normalizedUser = normalizeName(userName);
+                if (normalizedUser) {
+                    const allSnap = await getDocs(collection(window._db, 'students'));
+                    const match = allSnap.docs.find(d => {
+                        const a = normalizeName(d.data().name);
+                        return a === normalizedUser || a.includes(normalizedUser) || normalizedUser.includes(a);
+                    });
+                    if (match) {
+                        const d = match.data();
+                        window._packInfo = { found: true, pack: d.pack || 0, fechas: d.fechas || [], fin: d.fin || null };
+                        renderPackBadge();
+                        return;
+                    }
+                }
+
+                // 3. No está en 'students' → clase de cortesía si nunca ha reservado
+                const bookingsSnap = await getDocs(query(collection(window._db, 'agendamientos'), where('userId', '==', window._currentUser.uid)));
+                window._packInfo = { found: false, bookingsEver: bookingsSnap.size };
+            } catch (e) {
+                console.warn('loadStudentData:', e);
+                window._packInfo = { found: false, bookingsEver: 0 };
+            }
+            renderPackBadge();
+        }
+
+        function getPackState() {
+            const p = window._packInfo;
+            if (!p) return { type: 'loading' };
+            if (p.found) {
+                if (p.pack === 31) return { type: 'unlimited' };
+                if (p.pack > 0) {
+                    const used = p.fechas.length;
+                    const remaining = Math.max(0, p.pack - used);
+                    if (remaining === 0) return { type: 'exhausted' };
+                    return { type: 'pack', pack: p.pack, used, remaining };
+                }
+                return { type: 'exhausted' }; // found pero sin paquete asignado
+            }
+            if (p.bookingsEver > 0) return { type: 'exhausted' };
+            return { type: 'courtesy' };
+        }
+
+        function adjustMainMargin() {
+            const header = document.querySelector('header');
+            const main   = document.getElementById('appMain');
+            if (header && main) {
+                // Header fijo + un respiro para que el hero no quede pegado
+                const breathing = window.innerWidth < 768 ? 20 : 32;
+                main.style.marginTop = (header.offsetHeight + breathing) + 'px';
+            }
+        }
+        window.addEventListener('resize', adjustMainMargin);
+
+        function renderPackBadge() {
+            const state = getPackState();
+            const desktop = document.getElementById('packBadge');
+            const mobile  = document.getElementById('packBadgeMobile');
+            const main    = document.getElementById('appMain');
+            if (!desktop || !mobile) return;
+
+            let desktopHTML = '';
+            let mobileHTML  = '';
+
+            if (state.type === 'loading') {
+                desktop.innerHTML = '';
+                mobile.classList.add('hidden');
+                return;
+            }
+
+            if (state.type === 'pack') {
+                const { pack, used, remaining } = state;
+                const pct = Math.round((used / pack) * 100);
+                const barColor = remaining <= 1 ? '#ef4444' : remaining <= 3 ? '#f59e0b' : '#cf5038';
+                const pillColor = remaining <= 1 ? 'bg-red-100 text-red-600' : remaining <= 3 ? 'bg-amber-100 text-amber-700' : 'bg-[#fdf3f1] text-primary';
+
+                desktopHTML = `
+                    <span class="text-[11px] font-label-caps font-bold text-primary bg-[#fdf3f1] border border-primary/20 px-3 py-1.5 rounded-full whitespace-nowrap">Paquete ${pack}</span>
+                    <div class="flex items-center gap-2">
+                        <div class="w-20 h-1.5 bg-outline-variant rounded-full overflow-hidden">
+                            <div style="width:${pct}%;background:${barColor}" class="h-full rounded-full transition-all"></div>
+                        </div>
+                        <span class="text-[11px] font-semibold text-navy/70">${used}/${pack}</span>
+                    </div>
+                    <span class="text-[11px] font-label-caps font-bold ${pillColor} px-3 py-1.5 rounded-full whitespace-nowrap">${remaining} restante${remaining !== 1 ? 's' : ''}</span>`;
+
+                mobileHTML = `
+                    <span class="text-[10px] font-label-caps font-bold text-primary">Paquete ${pack}</span>
+                    <div class="w-16 h-1 bg-outline-variant rounded-full overflow-hidden">
+                        <div style="width:${pct}%;background:${barColor}" class="h-full rounded-full"></div>
+                    </div>
+                    <span class="text-[10px] font-semibold text-navy/60">${used}/${pack}</span>
+                    <span class="text-[10px] font-label-caps font-bold ${pillColor} px-2 py-0.5 rounded-full">${remaining} restante${remaining !== 1 ? 's' : ''}</span>`;
+            }
+
+            if (state.type === 'unlimited') {
+                desktopHTML = `<span class="text-[11px] font-label-caps font-bold text-purple-700 bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-full">Ilimitado</span>`;
+                mobileHTML  = `<span class="text-[10px] font-label-caps font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full">Ilimitado</span>`;
+            }
+
+            if (state.type === 'courtesy') {
+                desktopHTML = `<span class="text-[11px] font-label-caps font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-full">1 clase de cortesía</span>`;
+                mobileHTML  = `<span class="text-[10px] font-label-caps font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">1 clase de cortesía</span>`;
+            }
+
+            if (state.type === 'exhausted') {
+                const btnClass = 'flex items-center gap-1.5 font-label-caps font-bold text-white bg-[#25D366] hover:bg-[#1ebe5d] px-3 py-1.5 rounded-full transition-all cursor-pointer border-0';
+                const waIcon = `<svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21c-1.636 0-3.221-.42-4.63-1.218l-.333-.189-3.447.904.922-3.361-.208-.33C3.52 15.342 3 13.707 3 12.029c0-4.962 4.04-9.002 9.031-9.002 4.989 0 9.028 4.04 9.028 9.002 0 4.963-4.039 9.002-9.028 9.002zm4.143-5.622c-.227-.114-1.344-.664-1.552-.74-.208-.076-.36-.114-.513.114-.151.228-.582.74-.714.892-.132.152-.265.171-.492.057-.227-.114-.959-.354-1.826-1.129-.675-.604-1.13-1.349-1.263-1.577-.132-.228-.014-.351.1-.465.1-.101.227-.266.34-.398.114-.133.152-.228.227-.38.076-.152.038-.285-.019-.398-.057-.114-.513-1.235-.702-1.691-.184-.443-.372-.383-.513-.39-.133-.007-.285-.007-.437-.007-.152 0-.399.057-.607.285-.208.228-.797.779-.797 1.899 0 1.12.817 2.203.931 2.355.114.152 1.606 2.451 3.893 3.438.544.234.968.374 1.298.479.547.174 1.045.149 1.436.09.438-.066 1.344-.55 1.533-1.082.189-.532.189-.988.132-1.082-.057-.095-.208-.152-.435-.266z"/></svg>`;
+                desktopHTML = `<a href="${WA_PACK_URL}" target="_blank" rel="noopener" class="${btnClass} text-[11px]">${waIcon} Agendar paquete</a>`;
+                mobileHTML  = `<a href="${WA_PACK_URL}" target="_blank" rel="noopener" class="${btnClass} text-[10px]">${waIcon} Agendar paquete</a>`;
+            }
+
+            desktop.innerHTML = desktopHTML;
+            mobile.innerHTML  = mobileHTML;
+
+            // Mostrar/ocultar la tira mobile
+            if (mobileHTML) {
+                mobile.classList.remove('hidden');
+            } else {
+                mobile.classList.add('hidden');
+            }
+
+            // Ajustar el margen del main midiendo la altura real del header
+            adjustMainMargin();
+        }
+        // ─────────────────────────────────────────────────────────────────────
+
+        // slots/{slotId} es un contador atómico por horario que evita doble-booking
+        // ante reservas concurrentes. Se inicializa de forma perezosa contando los
+        // agendamientos activos legacy la primera vez que alguien reserva ese slot.
+        function slotDocId(fecha, hora) { return `${fecha}__${hora}`; }
+
+        // Estado del segundo modal (Google Calendar)
+        let _calPending = null; // { fecha, hora, prog, bookingId }
+
+        window.calendarModalNo = function () {
+            document.getElementById('calendarModal').classList.remove('open');
+            _calPending = null;
+            toast('✓ Clase agendada');
+        };
+
+        window.calendarModalYes = function () {
+            document.getElementById('calendarModal').classList.remove('open');
+            const { fecha, hora, prog } = _calPending || {};
+            _calPending = null;
+            if (!fecha) return;
+            // Todos los usuarios: abrir Google Calendar prefillado — sin OAuth, sin warnings
+            window.open(buildCalendarLink(fecha, hora, prog), '_blank', 'noopener');
+            toast('✓ Abrimos Google Calendar · Haz clic en Guardar');
+        };
+
+        async function doBook({ fecha, hora, prog }) {
+            const { collection, doc, getDoc, getDocs, query, where, setDoc, runTransaction, serverTimestamp } = window._fs;
+            // Verificar paquete antes de proceder (segunda línea de defensa)
+            if (getPackState().type === 'exhausted') {
+                toast('Has usado todas tus clases · Agenda tu paquete');
+                return;
+            }
+            // No se permite agendar en días festivos (segunda línea de defensa)
+            if (HOLIDAYS.has(fecha)) {
+                toast('Día festivo · no hay clases programadas');
+                return;
+            }
+            document.getElementById('loadingBar').style.display = 'block';
+            try {
+                const slotRef = doc(window._db, 'slots', slotDocId(fecha, hora));
+                const bookingRef = doc(collection(window._db, 'agendamientos'));
+
+                // Inicialización perezosa: si el slot aún no tiene contador, lo creamos
+                // a partir de los agendamientos activos existentes (datos legacy).
+                const initSnap = await getDoc(slotRef);
+                if (!initSnap.exists()) {
+                    const legacy = await getDocs(query(
+                        collection(window._db, 'agendamientos'),
+                        where('fecha', '==', fecha),
+                        where('hora', '==', hora),
+                        where('estado', '==', 'activo')
+                    ));
+                    await setDoc(slotRef, { fecha, hora, count: legacy.size, updatedAt: serverTimestamp() });
+                }
+
+                await runTransaction(window._db, async (tx) => {
+                    const s = await tx.get(slotRef);
+                    const count = (s.exists() && typeof s.data().count === 'number') ? s.data().count : 0;
+                    if (count >= MAX_SPOTS) throw new Error('FULL');
+                    tx.update(slotRef, { count: count + 1, updatedAt: serverTimestamp() });
+                    tx.set(bookingRef, {
+                        userId: window._currentUser.uid,
+                        userName: window._userName,
+                        userEmail: window._currentUser.email || null,
+                        fecha, hora, programa: prog,
+                        estado: 'activo',
+                        creadoEn: serverTimestamp(),
+                    });
+                });
+
+                loadWeekData();
+                celebrate();
+
+                // Mostrar segundo modal: pregunta opcional de Google Calendar
+                _calPending = { fecha, hora, prog, bookingId: bookingRef.id };
+                document.getElementById('calendarModal').classList.add('open');
+
+            } catch (e) {
+                if (e?.message === 'FULL') toast('Sin cupos disponibles');
+                else { console.error('doBook:', e); toast('Error al agendar'); }
+            } finally { document.getElementById('loadingBar').style.display = 'none'; }
+        }
+
+        async function doCancel({ bookingId, fecha, hora }) {
+            const { doc, runTransaction, serverTimestamp } = window._fs;
+            document.getElementById('loadingBar').style.display = 'block';
+            try {
+                const bookingRef = doc(window._db, 'agendamientos', bookingId);
+                const slotRef = doc(window._db, 'slots', slotDocId(fecha, hora));
+                let calEventId = null;
+
+                await runTransaction(window._db, async (tx) => {
+                    const b = await tx.get(bookingRef);
+                    if (!b.exists() || b.data().estado !== 'activo') return;
+                    calEventId = b.data().calEventId || null;
+                    const s = await tx.get(slotRef);
+                    tx.update(bookingRef, { estado: 'cancelado', canceladoEn: serverTimestamp() });
+                    if (s.exists()) {
+                        const count = s.data().count || 0;
+                        tx.update(slotRef, { count: Math.max(0, count - 1), updatedAt: serverTimestamp() });
+                    }
+                });
+
+                // Si el usuario había agregado la clase a Google Calendar, la eliminamos automáticamente
+                if (calEventId) await removeFromGoogleCalendar(calEventId);
+
+                toast('Clase cancelada');
+                loadWeekData();
+            } catch (e) { console.error('doCancel:', e); toast('Error al cancelar'); }
+            finally { document.getElementById('loadingBar').style.display = 'none'; }
+        }
+
+        function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('on'); setTimeout(() => t.classList.remove('on'), 3200); }
+
+        // Lluvia ligera de partículas al confirmar una reserva
+        function celebrate() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const colors = ['#cf5038', '#f59855', '#869a97', '#1a2a51', '#fde8e4'];
+            const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+            for (let i = 0; i < 28; i++) {
+                const p = document.createElement('div');
+                p.className = 'party-dot';
+                const angle = (Math.PI * 2 * i) / 28 + Math.random() * 0.5;
+                const dist = 90 + Math.random() * 160;
+                p.style.left = cx + 'px';
+                p.style.top = cy + 'px';
+                p.style.background = colors[i % colors.length];
+                p.style.setProperty('--px', Math.cos(angle) * dist + 'px');
+                p.style.setProperty('--py', Math.sin(angle) * dist + 60 + 'px');
+                p.style.setProperty('--pr', (Math.random() * 540 - 270) + 'deg');
+                p.style.animationDelay = (Math.random() * 0.12) + 's';
+                document.body.appendChild(p);
+                setTimeout(() => p.remove(), 1400);
+            }
+        }
+
+        window.toggleAuthMode = function (mode) {
+            document.getElementById('loginForm').classList.toggle('hidden', mode !== 'login');
+            document.getElementById('regForm').classList.toggle('hidden', mode !== 'register');
+        };
+    </script>
+
+</body>
+
+</html>

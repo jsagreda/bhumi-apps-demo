@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Bhumi Yoga Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage:    #7A9E7E;
+      --sage-d:  #5A7E5E;
+      --navy:    #2C3E50;
+      --cream:   #FAF8F3;
+      --fog:     #A0A0A0;
+      --outline: #E5E0D8;
+      --text:    #2C2C2C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      header { padding: 16px 32px; }
+    }
+
+    header .logo-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    header .logo-mark img { height: 40px; width: auto; object-fit: contain; display: block; }
+
+    header .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    header .brand .brand-name {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-name { font-size: 1.125rem; }
+    }
+
+    header .brand .brand-name .yoga-word { color: #cf5038; }
+
+    header .brand .brand-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 600;
+      color: #869a97;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-tag { font-size: 0.6rem; }
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      background: var(--sage);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    .toc {
+      background: #fff;
+      border: 1px solid var(--outline);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fog);
+      margin-bottom: 14px;
+    }
+
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--sage-d); text-decoration: none; font-size: 0.875rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--sage);
+      color: #fff;
+      border-radius: 50%;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #444; }
+
+    .highlight-box {
+      background: #EDF4EE;
+      border-left: 3px solid var(--sage);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: var(--sage-d); font-size: 0.875rem; font-weight: 500; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.875rem;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--outline);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #f9f7f2; }
+
+    .contact-card {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .contact-card a { color: #A8C9AB; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card p { color: rgba(255,255,255,0.75); margin-bottom: 6px; font-size: 0.875rem; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.8rem;
+      color: var(--fog);
+    }
+
+    footer a { color: var(--sage-d); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="/logo.png" alt="Bhumi Yoga" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="yoga-word">Yoga</span></span>
+    <span class="brand-tag">Studio</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Documento Legal</div>
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Última actualización: 18 de mayo de 2025 &nbsp;·&nbsp; Versión 1.0</p>
+
+  <div class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">¿Quiénes somos?</a></li>
+      <li><a href="#s2">Datos que recopilamos</a></li>
+      <li><a href="#s3">Finalidad del tratamiento</a></li>
+      <li><a href="#s4">Base legal del tratamiento</a></li>
+      <li><a href="#s5">Acceso a Google Calendar</a></li>
+      <li><a href="#s6">Compartición de datos con terceros</a></li>
+      <li><a href="#s7">Almacenamiento y seguridad</a></li>
+      <li><a href="#s8">Tus derechos (Habeas Data)</a></li>
+      <li><a href="#s9">Retención de datos</a></li>
+      <li><a href="#s10">Cambios a esta política</a></li>
+      <li><a href="#s11">Contacto</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    <p>Esta política cumple con la Ley 1581 de 2012 y el Decreto 1377 de 2013 (régimen de protección de datos personales de Colombia).</p>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">1</span>¿Quiénes somos?</h2>
+    <p><strong>Bhumi Yoga Studio</strong> es un estudio de yoga con sede en Colombia que ofrece clases presenciales y servicios de reserva y agenda en línea a través de su aplicación web.</p>
+    <p>Para los efectos de esta política, Bhumi Yoga Studio actúa como <strong>responsable del tratamiento</strong> de los datos personales de sus usuarios.</p>
+    <ul>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></li>
+      <li><strong>WhatsApp / Teléfono:</strong> +57 300 131 8160</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></li>
+    </ul>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">2</span>Datos que recopilamos</h2>
+    <p>Recopilamos los datos estrictamente necesarios para prestarte nuestros servicios:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Datos específicos</th>
+          <th>Fuente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Identificación</td>
+          <td>Nombre completo</td>
+          <td>Registro voluntario</td>
+        </tr>
+        <tr>
+          <td>Contacto</td>
+          <td>Correo electrónico, número de teléfono celular</td>
+          <td>Registro voluntario</td>
+        </tr>
+        <tr>
+          <td>Cuenta Google</td>
+          <td>Nombre, foto de perfil pública, dirección de correo Google</td>
+          <td>Google Sign-In (con tu autorización)</td>
+        </tr>
+        <tr>
+          <td>Calendario</td>
+          <td>Acceso para crear/leer eventos en tu Google Calendar personal</td>
+          <td>Google OAuth (con tu autorización explícita)</td>
+        </tr>
+        <tr>
+          <td>Reservas</td>
+          <td>Clases agendadas, fecha, hora, instructor</td>
+          <td>Generado por uso de la app</td>
+        </tr>
+        <tr>
+          <td>Técnicos</td>
+          <td>Datos de sesión (token de autenticación), hora de acceso</td>
+          <td>Automático al usar la app</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No recopilamos datos de pago, información de salud, ni ninguna categoría sensible de datos personales.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">3</span>Finalidad del tratamiento</h2>
+    <p>Usamos tus datos exclusivamente para:</p>
+    <ul>
+      <li>Crear y gestionar tu cuenta de usuario en la aplicación de Bhumi Yoga.</li>
+      <li>Mostrarte las clases disponibles y registrar tus reservas.</li>
+      <li>Agregar eventos a tu Google Calendar para que recibas recordatorios automáticos de tus clases.</li>
+      <li>Permitirte ver el historial de clases reservadas.</li>
+      <li>Enviarte notificaciones relevantes sobre tus clases (cambios, cancelaciones).</li>
+      <li>Mejorar la experiencia de uso de la aplicación.</li>
+    </ul>
+    <p>No usamos tus datos para publicidad de terceros ni para crear perfiles comerciales.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">4</span>Base legal del tratamiento</h2>
+    <p>De acuerdo con la Ley 1581 de 2012, el tratamiento de tus datos se basa en:</p>
+    <ul>
+      <li><strong>Tu consentimiento libre e informado</strong>, otorgado al registrarte en la aplicación.</li>
+      <li><strong>La ejecución del servicio contratado</strong>, es decir, la reserva y gestión de clases de yoga.</li>
+    </ul>
+    <p>Puedes revocar tu consentimiento en cualquier momento escribiéndonos a hello@demo-yoga.app, sin que esto afecte la licitud del tratamiento previo a la revocación.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">5</span>Acceso a Google Calendar</h2>
+    <p>Cuando decides conectar tu Google Calendar, Bhumi Yoga solicita permiso para:</p>
+    <ul>
+      <li><strong>Crear eventos</strong> en tu calendario principal, correspondientes a las clases que reservas.</li>
+      <li><strong>Leer eventos existentes</strong> del rango de fechas seleccionado, únicamente para evitar conflictos de horario.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Bhumi Yoga <strong>nunca</strong> modifica, elimina ni lee eventos que no hayamos creado nosotros. El acceso se limita al alcance mínimo necesario (scope: <code>calendar.events</code>).</p>
+    </div>
+    <p>El token de acceso a Google Calendar se almacena únicamente en la sesión activa de tu navegador y se elimina al cerrar sesión. Bhumi Yoga no almacena este token en sus servidores.</p>
+    <p>Puedes revocar este permiso en cualquier momento desde tu cuenta Google en: <strong>myaccount.google.com → Seguridad → Aplicaciones de terceros con acceso a tu cuenta</strong>.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">6</span>Compartición de datos con terceros</h2>
+    <p>Bhumi Yoga trabaja con los siguientes proveedores de confianza que pueden procesar tus datos como encargados del tratamiento:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Propósito</th>
+          <th>País de procesamiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Firebase</td>
+          <td>Autenticación, base de datos y alojamiento de la aplicación</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+        <tr>
+          <td>Google Calendar API</td>
+          <td>Creación de eventos en el calendario del usuario</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No vendemos, alquilamos ni cedemos tus datos personales a terceros con fines comerciales.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">7</span>Almacenamiento y seguridad</h2>
+    <p>Tus datos se almacenan en <strong>Google Cloud Firestore</strong> (infraestructura de Google Firebase), que ofrece:</p>
+    <ul>
+      <li>Cifrado en tránsito (TLS) y en reposo (AES-256).</li>
+      <li>Autenticación de doble factor disponible para cuentas de administrador.</li>
+      <li>Reglas de seguridad que garantizan que cada usuario solo accede a sus propios datos.</li>
+    </ul>
+    <p>Aunque implementamos medidas técnicas razonables, ningún sistema es 100% infalible. Si detectas un incidente de seguridad, repórtalo inmediatamente a hello@demo-yoga.app.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">8</span>Tus derechos (Habeas Data)</h2>
+    <p>De conformidad con la Ley 1581 de 2012, tienes derecho a:</p>
+    <ul>
+      <li><strong>Conocer</strong> los datos personales que tenemos sobre ti.</li>
+      <li><strong>Actualizar</strong> tus datos cuando estén desactualizados o sean incorrectos.</li>
+      <li><strong>Rectificar</strong> datos inexactos o incompletos.</li>
+      <li><strong>Suprimir</strong> tus datos cuando no sean necesarios para la finalidad que originó el tratamiento o cuando hayas revocado tu consentimiento.</li>
+      <li><strong>Revocar</strong> el consentimiento dado para el tratamiento.</li>
+      <li><strong>Acceder</strong> gratuitamente a tus datos personales una vez por mes natural.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, escríbenos a <strong>hello@demo-yoga.app</strong> con el asunto "Derechos Habeas Data". Responderemos en un plazo máximo de <strong>10 días hábiles</strong>.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">9</span>Retención de datos</h2>
+    <p>Conservamos tus datos mientras tu cuenta esté activa. Si solicitas la eliminación de tu cuenta:</p>
+    <ul>
+      <li>Tus datos personales serán eliminados dentro de los <strong>30 días hábiles</strong> siguientes a tu solicitud.</li>
+      <li>Los registros de asistencia pueden conservarse de forma anonimizada con fines estadísticos internos.</li>
+    </ul>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span>Cambios a esta política</h2>
+    <p>Podemos actualizar esta política para reflejar cambios en nuestras prácticas o en la legislación aplicable. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" al inicio del documento y, si los cambios son sustanciales, te notificaremos a través de la aplicación o por correo electrónico.</p>
+    <p>El uso continuado de la aplicación tras la publicación de cambios implica la aceptación de la política actualizada.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span>Contacto</h2>
+    <p>Si tienes preguntas sobre esta política o sobre el tratamiento de tus datos, puedes contactarnos por cualquiera de los siguientes medios:</p>
+    <div class="contact-card">
+      <h3>Bhumi Yoga Studio</h3>
+      <p>Correo electrónico: <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></p>
+      <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank">+57 300 131 8160</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></p>
+      <p style="margin-top:12px; font-size:0.78rem; opacity:0.6;">Colombia &nbsp;·&nbsp; Ley 1581 de 2012</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Studio &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito</a>
+</footer>
+
+</body>
+</html>

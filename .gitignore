@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+build/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+*-debug.log
+
+# Editor / OS
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+*.log

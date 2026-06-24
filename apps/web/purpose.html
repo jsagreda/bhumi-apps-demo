@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propósito del Sitio — Bhumi Yoga Academy</title>
+  <meta name="description" content="Propósito y descripción del sitio web de Bhumi Yoga Academy en demo-yoga.app — academia boutique de yoga en Armenia, Quindío." />
+  <link rel="icon" type="image/png" href="assets/isotipos/bhumi-isotipo-color.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:    #1a2a51;
+      --rojo:    #cf5038;
+      --rojo-h:  #b8442e;
+      --crema:   #fdf8f5;
+      --arena:   #f1e7da;
+      --salvia:  #869a97;
+      --fog:     #a0a0a0;
+      --outline: #e8ddd4;
+      --text:    #2c2c2c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--crema);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) { header { padding: 16px 40px; } }
+
+    header .logo-mark img { height: 42px; width: auto; display: block; }
+
+    header .brand { display: flex; flex-direction: column; line-height: 1.15; }
+
+    header .brand .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 640px) { header .brand .brand-name { font-size: 1.1rem; } }
+
+    header .brand .brand-name .rojo { color: var(--rojo); }
+
+    header .brand .brand-tag {
+      font-size: 0.52rem;
+      font-weight: 600;
+      color: var(--salvia);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+
+    /* ── Doc badge ── */
+    .doc-badge {
+      display: inline-block;
+      background: var(--salvia);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 4px 13px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Headings ── */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    .intro-lead {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* ── Sections ── */
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    p { margin-bottom: 14px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; color: #444; }
+
+    /* ── Boxes ── */
+    .highlight-box {
+      background: #fef4f2;
+      border-left: 3px solid var(--rojo);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: #8b3c2c; font-size: 0.875rem; font-weight: 500; }
+
+    .info-box {
+      background: var(--arena);
+      border-left: 3px solid var(--salvia);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .info-box p { margin-bottom: 0; color: #5a6b68; font-size: 0.875rem; font-weight: 500; }
+
+    /* ── Pill grid ── */
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .pill {
+      background: var(--arena);
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--outline);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.78rem;
+      color: var(--fog);
+      background: var(--crema);
+    }
+
+    footer a { color: var(--rojo); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    a { color: var(--rojo); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="assets/isotipos/bhumi-isotipo-color.png" alt="Bhumi Yoga Academy" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="rojo">Yoga</span> Academy</span>
+    <span class="brand-tag">Armenia · Quindío</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Propósito · Bhumi Web</div>
+  <h1>Propósito del sitio web</h1>
+  <p class="meta">Última actualización: 16 de junio de 2026 &nbsp;·&nbsp; Versión 2.0 &nbsp;·&nbsp; demo-yoga.app</p>
+
+  <p class="intro-lead">
+    <strong>demo-yoga.app</strong> es el sitio web de presentación y tienda de <strong>Bhumi Yoga Academy</strong>, una academia boutique de yoga en Armenia, Quindío, Colombia. Este documento describe el propósito, el alcance y la naturaleza de la información y funcionalidades ofrecidas en el sitio.
+  </p>
+
+  <!-- ¿Qué es este sitio? -->
+  <section>
+    <h2>¿Qué es este sitio?</h2>
+    <p>Es un <strong>sitio web informativo y de tienda</strong>. Su propósito principal es presentar a visitantes interesados la filosofía, los servicios y la comunidad de Bhumi Yoga Academy, y permitirles crear una cuenta para explorar y comprar productos de nuestra tienda esencial.</p>
+
+    <div class="info-box">
+      <p>Este sitio <strong>no es la aplicación de reservas de clases</strong>. La gestión de reservas y asistencia se realiza en <strong>Bhumi Calendar</strong> (<a href="https://bhumi-demo.firebaseapp.com" target="_blank">bhumi-demo.firebaseapp.com</a>), que es un servicio independiente con sus propios documentos legales.</p>
+    </div>
+  </section>
+
+  <!-- Contenido ofrecido -->
+  <section>
+    <h2>Contenido ofrecido</h2>
+    <p>A través de este sitio los visitantes pueden conocer:</p>
+    <ul>
+      <li>La historia, filosofía y enfoque pedagógico de Bhumi Yoga Academy.</li>
+      <li>Los tipos de clases y disciplinas que se practican en el estudio.</li>
+      <li>Información sobre talleres, retiros y eventos especiales.</li>
+      <li>La comunidad de estudiantes e instructores.</li>
+      <li>Los productos y accesorios disponibles en nuestra tienda esencial.</li>
+      <li>Información de ubicación y formas de contacto.</li>
+    </ul>
+
+    <div class="pill-grid">
+      <span class="pill">Yoga Hatha</span>
+      <span class="pill">Vinyasa Flow</span>
+      <span class="pill">Yin Yoga</span>
+      <span class="pill">Meditación</span>
+      <span class="pill">Talleres</span>
+      <span class="pill">Retiros</span>
+      <span class="pill">Tienda esencial</span>
+      <span class="pill">Comunidad</span>
+    </div>
+  </section>
+
+  <!-- Cuenta de usuario -->
+  <section>
+    <h2>Cuenta de usuario e inicio de sesión</h2>
+    <p>El sitio permite crear una cuenta para acceder a funciones de la tienda esencial. Puedes registrarte de dos formas:</p>
+    <ul>
+      <li>Con tu correo electrónico y una contraseña.</li>
+      <li>Iniciando sesión con tu cuenta de Google (Google Sign-In), de forma <strong>completamente voluntaria</strong>.</li>
+    </ul>
+
+    <div class="info-box">
+      <p>El inicio de sesión con Google solo recibe tu nombre, correo y foto de perfil pública para identificarte. El sitio <strong>no</strong> solicita ni obtiene acceso a tu Google Calendar, Gmail, Drive ni a ningún otro servicio o dato de tu cuenta de Google.</p>
+    </div>
+  </section>
+
+  <!-- Tienda y pagos -->
+  <section>
+    <h2>Tienda y pagos</h2>
+    <p>El sitio incluye un catálogo de productos de nuestra tienda esencial (esterillas, accesorios y artículos relacionados con la práctica de yoga).</p>
+    <ul>
+      <li><strong>Estado actual:</strong> las compras iniciadas en el sitio se completan a través de un mensaje directo de WhatsApp, donde se coordina el pago y la entrega.</li>
+      <li><strong>Próximamente:</strong> Bhumi Yoga Academy incorporará una pasarela de pago en línea para procesar compras directamente en el sitio. Cuando esto ocurra, se actualizarán los Términos y la Política de Privacidad con los detalles del proveedor de pagos.</li>
+    </ul>
+  </section>
+
+  <!-- Qué NO hace este sitio -->
+  <section>
+    <h2>Lo que este sitio NO hace</h2>
+    <p>Para mantener la claridad sobre el alcance de este sitio, confirmamos que <strong>demo-yoga.app</strong>:</p>
+    <ul>
+      <li>No procesa reservas de clases ni gestiona la asistencia al estudio (eso ocurre en Bhumi Calendar).</li>
+      <li>No solicita acceso a Google Calendar, Google Drive, Gmail ni ningún otro dato de tu cuenta de Google más allá del nombre, correo y foto de perfil usados para identificarte.</li>
+      <li>No almacena datos completos de tarjetas o métodos de pago mientras las compras se coordinen por WhatsApp.</li>
+      <li>No recopila datos de salud, información biométrica ni datos sensibles.</li>
+      <li>No utiliza publicidad personalizada ni seguimiento comercial de usuarios.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>Para reservar clases en Bhumi Yoga Academy, los estudiantes deben usar nuestra <strong>aplicación Bhumi Calendar</strong>, que tiene sus propias políticas de privacidad y términos de uso.</p>
+    </div>
+  </section>
+
+  <!-- Tecnología y alojamiento -->
+  <section>
+    <h2>Tecnología y alojamiento</h2>
+    <p>El sitio web <strong>demo-yoga.app</strong> está alojado en <strong>Google Firebase Hosting</strong> y utiliza <strong>Firebase Authentication</strong> para el registro e inicio de sesión de usuarios, ambos servicios de alta disponibilidad y seguridad de Google.</p>
+    <p>El sitio utiliza las siguientes tecnologías de terceros:</p>
+    <ul>
+      <li><strong>Google Fonts</strong> — tipografías del diseño visual.</li>
+      <li><strong>Google Firebase Hosting</strong> — infraestructura de alojamiento y entrega (CDN).</li>
+      <li><strong>Google Firebase Authentication</strong> — registro e inicio de sesión, incluyendo Google Sign-In.</li>
+      <li><strong>Google Analytics</strong> — estadísticas de visitas anonimizadas (opcional, con consentimiento).</li>
+    </ul>
+  </section>
+
+  <!-- Servicios relacionados -->
+  <section>
+    <h2>Aplicaciones y servicios relacionados</h2>
+    <p>Bhumi Yoga Academy opera servicios digitales independientes a este sitio web:</p>
+    <ul>
+      <li><strong>Bhumi Calendar</strong> — aplicación web para que los estudiantes reserven y gestionen sus clases. Disponible en <a href="https://bhumi-demo.firebaseapp.com" target="_blank">bhumi-demo.firebaseapp.com</a>. Tiene sus propias políticas y términos.</li>
+      <li><strong>Bhumi Studio Manager</strong> — herramienta interna para instructoras y administradoras. No es accesible al público general.</li>
+    </ul>
+    <p>Cada uno de estos servicios tiene documentos legales propios apropiados a su funcionalidad.</p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Academy &nbsp;·&nbsp; Armenia, Quindío &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito del Sitio</a>
+</footer>
+
+</body>
+</html>

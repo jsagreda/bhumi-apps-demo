@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precios y Planes · Bhumi Yoga Academy</title>
+<meta name="description" content="Planes y membresías de Bhumi Yoga en Armenia, Quindío. Paquetes flexibles válidos por un mes, sin permanencia y con acceso a todas las disciplinas.">
+<meta name="theme-color" content="#1a2a51">
+<link rel="icon" type="image/png" href="assets/isotipos/bhumi-isotipo-color.png">
+<link rel="apple-touch-icon" href="assets/isotipos/bhumi-isotipo-color.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bhumi Yoga Academy">
+<meta property="og:title" content="Precios y Planes · Bhumi Yoga">
+<meta property="og:description" content="Elige cómo quieres practicar. Paquetes flexibles válidos por un mes.">
+<meta property="og:url" content="https://demo-yoga.app/planes">
+<meta property="og:image" content="https://demo-yoga.app/assets/logos/bhumi-logo-color.png">
+<meta property="og:locale" content="es_CO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rojo: #cf5038; --rojo-hover: #b8442e; --naranja: #f59855; --navy: #1a2a51;
+    --salvia: #869a97; --crema: #fdf8f5; --arena: #f1e7da; --blanco: #ffffff;
+    --footer: #111b34;
+    --hero-grad: linear-gradient(160deg,#f5e9e0 0%,#fdf8f5 60%,#e8f0ef 100%);
+    --brand-grad: linear-gradient(135deg,#cf5038 0%,#f59855 100%);
+    --shadow-soft: 0 18px 50px rgba(207,80,56,.16);
+    --shadow-warm: 0 16px 48px -16px rgba(207,80,56,.22);
+    --ease-bhumi: cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:'Poppins',sans-serif;font-weight:400;color:var(--navy);background:var(--crema);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%}
+  a{color:inherit;text-decoration:none} button{font-family:inherit;cursor:pointer;border:none;background:none}
+  img{display:block;max-width:100%;height:auto} ::selection{background:var(--rojo);color:white}
+  :focus-visible{outline:2px solid var(--rojo);outline-offset:3px;border-radius:6px}
+  .container{max-width:1240px;margin:0 auto;padding:0 20px}
+  .logo-svg{display:inline-flex;align-items:center}
+  .logo-svg img{height:42px;width:auto;display:block}
+
+  /* ── NAV ── */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(253,248,245,.92);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(134,154,151,.12)}
+  .nav-inner{max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+  .nav-links{display:none;gap:28px;font-size:14px;font-weight:500;color:var(--navy)}
+  .nav-links a{transition:color .2s} .nav-links a:hover{color:var(--rojo)} .nav-links a.active{color:var(--rojo);font-weight:600}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .nav-entrar{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;border:1.5px solid rgba(26,42,81,.25);color:var(--navy);font-size:13px;font-weight:600;transition:background .25s,border-color .25s,color .25s;cursor:pointer;text-decoration:none}
+  .nav-entrar:hover{background:var(--navy);color:white;border-color:var(--navy)}
+  .nav-entrar svg{width:14px;height:14px;stroke:currentColor}
+  .nav-user{display:none;align-items:center;gap:8px;position:relative;cursor:pointer}
+  .user-avatar{width:36px;height:36px;border-radius:50%;background:var(--brand-grad);color:white;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 4px 12px rgba(207,80,56,.3)}
+  .user-dropdown{position:absolute;top:100%;right:0;padding-top:10px;display:none;z-index:100;min-width:200px}
+  .user-dropdown-inner{background:white;border-radius:16px;padding:12px;box-shadow:0 12px 40px rgba(26,42,81,.15)}
+  .nav-user:hover .user-dropdown,.nav-user.open .user-dropdown{display:block}
+  .user-dropdown p{font-size:12px;color:var(--salvia);padding:6px 8px 12px;border-bottom:1px solid rgba(134,154,151,.15);margin-bottom:8px;word-break:break-all}
+  .user-dropdown button{width:100%;text-align:left;padding:8px;border-radius:8px;font-size:13px;font-weight:600;color:var(--rojo);transition:background .2s}
+  .user-dropdown button:hover{background:rgba(207,80,56,.06)}
+  .nav-cta-desktop{display:none;padding:10px 20px;border-radius:999px;background:var(--rojo);color:white;font-size:13px;font-weight:600;box-shadow:var(--shadow-soft);transition:background .25s,transform .25s}
+  .nav-cta-desktop:hover{background:var(--rojo-hover);transform:translateY(-2px)}
+  @media(min-width:960px){.nav-links{display:flex}.nav-cta-desktop{display:inline-flex;align-items:center;gap:6px}.hamburger{display:none}}
+  .hamburger{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:transparent;transition:background .25s}
+  .hamburger:hover{background:rgba(207,80,56,.08)} .hamburger svg{width:22px;height:22px;stroke:var(--navy)}
+  .mobile-menu{display:none;padding:12px 20px 20px;border-top:1px solid rgba(134,154,151,.15);background:var(--crema)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:12px 0;font-weight:500;color:var(--navy);border-bottom:1px solid rgba(134,154,151,.1)}
+  .mobile-menu a:last-child{border-bottom:none}
+
+  /* ── AUTH MODAL ── */
+  .auth-overlay{position:fixed;inset:0;z-index:200;background:rgba(26,42,81,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+  .auth-modal{background:white;border-radius:28px;padding:40px 36px;width:100%;max-width:420px;box-shadow:0 32px 80px rgba(26,42,81,.22);position:relative}
+  .auth-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--crema);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:background .2s}
+  .auth-close:hover{background:var(--arena)}
+  .auth-logo{display:flex;justify-content:center;margin-bottom:28px}
+  .auth-logo img{height:38px}
+  .auth-title{font-size:20px;font-weight:700;color:var(--navy);text-align:center;margin-bottom:24px}
+  .auth-label{display:block;font-size:10px;font-weight:700;letter-spacing:.15em;color:var(--salvia);margin-bottom:8px;text-transform:uppercase}
+  .auth-input{width:100%;padding:14px 18px;border:1.5px solid rgba(134,154,151,.35);border-radius:14px;font-family:inherit;font-size:15px;color:var(--navy);background:var(--crema);outline:none;transition:border-color .25s,background .25s;margin-bottom:16px}
+  .auth-input:focus{border-color:var(--rojo);background:white}
+  .auth-btn-main{width:100%;padding:16px;border-radius:14px;background:var(--rojo);color:white;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:.08em;cursor:pointer;transition:background .25s,transform .2s;margin-top:4px}
+  .auth-btn-main:hover{background:var(--rojo-hover);transform:translateY(-1px)}
+  .auth-error{color:var(--rojo);font-size:12px;text-align:center;margin-top:10px;min-height:16px}
+  .auth-toggle{text-align:center;font-size:13px;color:var(--salvia);margin-top:16px}
+  .auth-link{color:var(--rojo);font-weight:700;cursor:pointer}
+  .auth-link:hover{text-decoration:underline}
+  .auth-divider{position:relative;margin:20px 0;text-align:center}
+  .auth-divider::before{content:'';position:absolute;inset-block:50%;left:0;right:0;height:1px;background:rgba(134,154,151,.25)}
+  .auth-divider span{position:relative;background:white;padding:0 14px;font-size:12px;color:var(--salvia)}
+  .auth-btn-google{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:13px;border-radius:14px;border:1.5px solid rgba(134,154,151,.3);background:white;font-family:inherit;font-size:14px;font-weight:500;color:var(--navy);cursor:pointer;transition:background .2s,border-color .2s}
+  .auth-btn-google:hover{background:var(--crema);border-color:rgba(134,154,151,.5)}
+  .auth-legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(134,154,151,.2);text-align:center;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;font-size:11px;color:var(--salvia)}
+  .auth-legal a{transition:color .2s} .auth-legal a:hover{color:var(--rojo)}
+
+  /* ── BUTTONS ── */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s var(--ease-bhumi),box-shadow .25s,background .25s,color .25s,border-color .25s;cursor:pointer}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--rojo);color:white;box-shadow:var(--shadow-soft)}
+  .btn-primary:hover{background:var(--rojo-hover);box-shadow:0 24px 60px rgba(207,80,56,.28)}
+  .btn-outline{background:transparent;color:var(--rojo);border:1.5px solid var(--rojo)}
+  .btn-outline:hover{background:var(--rojo);color:white}
+  .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid rgba(26,42,81,.2)}
+  .btn-ghost:hover{border-color:var(--navy);background:rgba(26,42,81,.04)}
+  .btn svg{width:18px;height:18px}
+
+  /* ── HEADINGS ── */
+  .section-eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:600;color:var(--salvia)}
+  .section-script{font-family:'Sacramento',cursive;font-size:46px;color:var(--naranja);line-height:1}
+  .section-title{font-weight:700;font-size:clamp(32px,5vw,52px);line-height:1.1;color:var(--navy);margin-top:8px;letter-spacing:-.015em}
+
+  /* ── PLANES PAGE ── */
+  .planes-page{background:linear-gradient(180deg,#f5e9e0 0%,#fdf8f5 38%,#fdf8f5 100%);padding:128px 0 96px;position:relative;overflow:hidden}
+  .planes-page::before{content:'';position:absolute;top:-120px;right:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(245,152,85,.16),transparent 70%);pointer-events:none}
+  .planes-page::after{content:'';position:absolute;bottom:120px;left:-140px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(207,80,56,.10),transparent 70%);pointer-events:none}
+  .planes-page .container{position:relative;z-index:1}
+  .planes-head{text-align:center;max-width:700px;margin:0 auto 56px}
+  .planes-head p.intro{color:var(--salvia);margin-top:16px;font-size:16px}
+  .planes-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:stretch}
+  .plan-card{position:relative;background:white;border:1px solid rgba(134,154,151,.22);border-radius:24px;padding:34px 22px;display:flex;flex-direction:column;text-align:center;transition:transform .35s var(--ease-bhumi),box-shadow .35s,border-color .35s}
+  .plan-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-warm);border-color:rgba(245,152,85,.45)}
+  .plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--naranja);color:white;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(245,152,85,.4)}
+  .plan-name{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--salvia)}
+  .plan-classes{font-size:32px;font-weight:700;color:var(--navy);margin-top:8px;line-height:1.05}
+  .plan-classes small{display:block;font-size:13px;font-weight:500;color:var(--salvia);letter-spacing:0;text-transform:none;margin-top:3px}
+  .plan-price{font-size:29px;font-weight:700;color:var(--rojo);margin-top:18px;line-height:1}
+  .plan-price b{font-weight:700}
+  .plan-price span{font-size:13px;font-weight:600;color:var(--salvia)}
+  .plan-period{font-size:12px;color:var(--salvia);margin-top:7px}
+  .plan-perclass{font-size:12px;font-weight:600;color:var(--naranja);margin-top:12px;background:rgba(245,152,85,.12);border-radius:999px;padding:5px 12px;align-self:center}
+  .plan-divider{height:1px;background:rgba(134,154,151,.18);margin:20px 0}
+  .plan-features{list-style:none;text-align:left;display:flex;flex-direction:column;gap:11px;font-size:13px;color:var(--navy);flex:1}
+  .plan-features li{display:flex;align-items:flex-start;gap:9px;line-height:1.35}
+  .plan-features svg{width:16px;height:16px;flex-shrink:0;stroke:var(--naranja);margin-top:1px}
+  .plan-cta{margin-top:26px;width:100%;justify-content:center;padding:13px 20px;font-size:14px}
+  .plan-card.featured{background:var(--navy);border-color:var(--navy);box-shadow:0 26px 64px -22px rgba(26,42,81,.55);transform:scale(1.045);z-index:2}
+  .plan-card.featured:hover{transform:scale(1.045) translateY(-6px)}
+  .plan-card.featured .plan-name{color:rgba(255,255,255,.7)}
+  .plan-card.featured .plan-classes{color:white}
+  .plan-card.featured .plan-classes small{color:rgba(255,255,255,.6)}
+  .plan-card.featured .plan-price{color:var(--naranja)}
+  .plan-card.featured .plan-price span{color:rgba(255,255,255,.55)}
+  .plan-card.featured .plan-period{color:rgba(255,255,255,.6)}
+  .plan-card.featured .plan-perclass{background:rgba(245,152,85,.18)}
+  .plan-card.featured .plan-divider{background:rgba(255,255,255,.16)}
+  .plan-card.featured .plan-features{color:rgba(255,255,255,.86)}
+  .plan-card.premium{border:2px solid transparent;background:linear-gradient(white,white) padding-box,var(--brand-grad) border-box}
+  .plan-card.premium .plan-badge{background:var(--brand-grad)}
+  .planes-note{margin-top:44px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;color:var(--salvia);font-size:13px}
+  .planes-note span{display:inline-flex;align-items:center;gap:7px}
+  .planes-note svg{width:16px;height:16px;stroke:var(--naranja);flex-shrink:0}
+  @media(max-width:1080px){
+    .planes-grid{grid-template-columns:repeat(2,1fr);gap:26px 18px}
+    .plan-card.featured{transform:none}
+    .plan-card.featured:hover{transform:translateY(-6px)}
+  }
+  @media(max-width:560px){.planes-grid{grid-template-columns:1fr}}
+
+  /* ── FAQ ── */
+  .faq{padding:80px 0;background:var(--crema)}
+  .faq-head{text-align:center;margin-bottom:44px}
+  .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:920px;margin:0 auto}
+  .faq-card{background:white;border:1px solid rgba(134,154,151,.2);border-radius:18px;padding:26px 24px}
+  .faq-card h3{font-size:15px;font-weight:700;color:var(--navy);display:flex;gap:10px;align-items:flex-start}
+  .faq-card h3 svg{width:18px;height:18px;stroke:var(--naranja);flex-shrink:0;margin-top:1px}
+  .faq-card p{font-size:13.5px;color:var(--salvia);margin-top:10px;line-height:1.6;padding-left:28px}
+  @media(max-width:680px){.faq-grid{grid-template-columns:1fr}}
+
+  /* ── CTA BAND ── */
+  .cta-band{background:var(--brand-grad);padding:64px 20px;text-align:center;color:white;position:relative;overflow:hidden}
+  .cta-band::before,.cta-band::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
+  .cta-band::before{top:-60px;left:-40px;width:200px;height:200px}
+  .cta-band::after{bottom:-80px;right:-30px;width:240px;height:240px}
+  .cta-band-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+  .cta-band h2{font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.15}
+  .cta-band p{margin-top:14px;font-size:15px;color:rgba(255,255,255,.9)}
+  .cta-band .btn{margin-top:28px}
+
+  /* ── FOOTER ── */
+  .footer{background:var(--footer);color:rgba(255,255,255,.7);padding:48px 20px;text-align:center}
+  .footer img{height:40px;margin:0 auto 18px}
+  .footer-links{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;font-size:13px;margin-bottom:18px}
+  .footer-links a{transition:color .2s} .footer-links a:hover{color:var(--naranja)}
+  .footer-copy{font-size:12px;color:rgba(255,255,255,.45)}
+
+  /* ── CART ── */
+  .cart-toggle{position:fixed;bottom:24px;right:20px;z-index:40;width:56px;height:56px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(26,42,81,.3);transition:transform .25s}
+  .cart-toggle:hover{transform:scale(1.06)} .cart-toggle svg{width:22px;height:22px}
+  .cart-count{position:absolute;top:-4px;right:-4px;background:var(--rojo);color:white;font-size:11px;font-weight:700;min-width:20px;height:20px;padding:0 5px;border-radius:999px;display:flex;align-items:center;justify-content:center}
+  .cart-drawer{position:fixed;top:0;right:-420px;bottom:0;width:100%;max-width:400px;background:white;z-index:100;box-shadow:-20px 0 60px rgba(0,0,0,.18);transition:right .4s var(--ease-bhumi);display:flex;flex-direction:column}
+  .cart-drawer.open{right:0}
+  .cart-head{padding:24px;border-bottom:1px solid rgba(134,154,151,.2);display:flex;justify-content:space-between;align-items:center}
+  .cart-head h3{font-size:18px;font-weight:700}
+  .cart-close{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--crema);color:var(--navy)}
+  .cart-close svg{width:16px;height:16px;stroke:var(--navy)}
+  .cart-items{flex:1;padding:16px 24px;overflow-y:auto}
+  .cart-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(134,154,151,.15)}
+  .cart-item-icon{width:48px;height:48px;border-radius:12px;background:var(--brand-grad);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:white}
+  .cart-item-icon svg{width:24px;height:24px}
+  .cart-item-info{flex:1;font-size:13px;min-width:0}
+  .cart-item-name{font-weight:600;color:var(--navy)}
+  .cart-item-price{color:var(--rojo);font-weight:700;margin-top:4px}
+  .cart-item-remove{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--salvia);flex-shrink:0;transition:background .2s,color .2s}
+  .cart-item-remove:hover{background:rgba(207,80,56,.1);color:var(--rojo)}
+  .cart-item-remove svg{width:16px;height:16px}
+  .cart-foot{padding:24px;border-top:1px solid rgba(134,154,151,.2);background:var(--crema)}
+  .cart-hint{font-size:12px;color:var(--salvia);text-align:center;margin-bottom:14px;line-height:1.5}
+  .cart-total{display:flex;justify-content:space-between;font-weight:700;margin-bottom:16px}
+  .cart-foot .btn{width:100%;justify-content:center}
+  .cart-backdrop{position:fixed;inset:0;z-index:90;background:rgba(26,42,81,.4);opacity:0;pointer-events:none;transition:opacity .3s}
+  .cart-backdrop.open{opacity:1;pointer-events:auto}
+
+  /* ── FADE ── */
+  .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-bhumi),transform .7s var(--ease-bhumi)}
+  .fade-up.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ══ AUTH MODAL ══ -->
+<div id="auth-overlay" class="auth-overlay">
+  <div class="auth-modal">
+    <button class="auth-close" onclick="closeAuthModal()" aria-label="Cerrar">✕</button>
+    <div class="auth-logo">
+      <img src="assets/logos/bhumi-logo-color.png" alt="Bhumi Yoga">
+    </div>
+    <h2 class="auth-title" id="auth-title">Ingresar</h2>
+    <form id="auth-form">
+      <label class="auth-label" for="auth-email">Correo electrónico</label>
+      <input class="auth-input" id="auth-email" type="email" placeholder="tu@correo.com" required autocomplete="email">
+      <label class="auth-label" for="auth-pass">Contraseña</label>
+      <input class="auth-input" id="auth-pass" type="password" placeholder="••••••••" required autocomplete="current-password">
+      <button type="submit" class="auth-btn-main" id="auth-submit">ENTRAR</button>
+    </form>
+    <p class="auth-error" id="auth-error"></p>
+    <p class="auth-toggle" id="auth-toggle-text">
+      ¿Primera vez aquí? <span class="auth-link" onclick="toggleAuthMode('register')">Crear cuenta</span>
+    </p>
+    <div class="auth-divider"><span>o continúa con</span></div>
+    <button class="auth-btn-google" id="googleBtn" onclick="doGoogleLogin()">
+      <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
+        <path d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
+        <path d="M3.964 10.706A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.706V4.962H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.038l3.007-2.332z" fill="#FBBC05"/>
+        <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.962L3.964 6.294C4.672 4.169 6.656 3.58 9 3.58z" fill="#EA4335"/>
+      </svg>
+      Continuar con Google
+    </button>
+    <div class="auth-legal">
+      <a href="/privacy-policy" target="_blank">Privacidad</a>
+      <span>·</span>
+      <a href="/terms" target="_blank">Términos</a>
+      <span>·</span>
+      <a href="/purpose" target="_blank">Propósito</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="public-web.html#inicio" class="logo-svg" aria-label="Bhumi Yoga · Inicio">
+      <img src="assets/logos/bhumi-logo-color.png" alt="Bhumi Yoga">
+    </a>
+    <div class="nav-links">
+      <a href="/#inicio">Inicio</a>
+      <a href="/#intencion">Clases</a>
+      <a href="/planes" class="active">Planes</a>
+      <a href="/#talleres">Eventos</a>
+      <a href="/#tienda">Tienda</a>
+    </div>
+    <div class="nav-actions">
+      <a id="nav-entrar" class="nav-entrar" href="#" onclick="return openAuthModal(event)">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Entrar
+      </a>
+      <div id="nav-user" class="nav-user">
+        <div class="user-avatar" id="user-avatar">U</div>
+        <div class="user-dropdown">
+          <div class="user-dropdown-inner">
+            <p id="user-email-label">usuario@correo.com</p>
+            <button onclick="doLogout()">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+      <a href="https://bhumi-demo.firebaseapp.com" target="_blank" rel="noopener" class="nav-cta-desktop">
+        Reservar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#inicio">Inicio</a>
+    <a href="/#intencion">Clases</a>
+    <a href="/planes">Planes</a>
+    <a href="/#talleres">Eventos</a>
+    <a href="/#tienda">Tienda</a>
+    <a href="https://bhumi-demo.firebaseapp.com" target="_blank" rel="noopener" style="color:var(--rojo);font-weight:700;">Reservar →</a>
+  </div>
+</nav>
+
+<!-- ══ PLANES ══ -->
+<section class="planes-page" id="planes">
+  <div class="container">
+    <div class="planes-head fade-up">
+      <p class="section-eyebrow">MEMBRESÍAS BHUMI · 2026</p>
+      <p class="section-script" style="margin-top:4px;">Precios y planes</p>
+      <h2 class="section-title">Elige cómo quieres practicar</h2>
+      <p class="intro">Paquetes flexibles válidos por un mes, sin permanencia y con acceso a todas nuestras disciplinas. Agrega tu plan al carrito y finaliza tu compra por WhatsApp. Si inicias sesión, vinculamos tu compra a tu perfil de estudiante Bhumi.</p>
+    </div>
+
+    <div class="planes-grid fade-up">
+      <!-- 1 clase -->
+      <article class="plan-card">
+        <p class="plan-name">Esencial</p>
+        <p class="plan-classes">1 <small>clase</small></p>
+        <p class="plan-price"><span>$</span><b>33.000</b></p>
+        <p class="plan-period">Pago único · COP</p>
+        <span class="plan-perclass">Ideal para probar</span>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Acceso a 1 clase</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Cualquier disciplina</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sin compromiso</li>
+        </ul>
+        <button class="btn btn-primary plan-cta" data-add data-name="Plan 1 clase" data-price="33000" data-pack="1">Elegir plan</button>
+      </article>
+
+      <!-- 4 clases -->
+      <article class="plan-card">
+        <p class="plan-name">Inicia</p>
+        <p class="plan-classes">4 <small>clases</small></p>
+        <p class="plan-price"><span>$</span><b>105.000</b></p>
+        <p class="plan-period">Válido 30 días · COP</p>
+        <span class="plan-perclass">$26.250 por clase</span>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>4 clases al mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Todas las disciplinas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reserva flexible</li>
+        </ul>
+        <button class="btn btn-primary plan-cta" data-add data-name="Plan 4 clases" data-price="105000" data-pack="4">Elegir plan</button>
+      </article>
+
+      <!-- 8 clases · FEATURED -->
+      <article class="plan-card featured">
+        <span class="plan-badge">Más elegido</span>
+        <p class="plan-name">Constancia</p>
+        <p class="plan-classes">8 <small>clases</small></p>
+        <p class="plan-price"><span>$</span><b>155.000</b></p>
+        <p class="plan-period">Válido 30 días · COP</p>
+        <span class="plan-perclass">$19.375 por clase</span>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>8 clases al mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>≈ 2 clases por semana</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Todas las disciplinas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reserva flexible</li>
+        </ul>
+        <button class="btn btn-primary plan-cta" data-add data-name="Plan 8 clases" data-price="155000" data-pack="8">Elegir plan</button>
+      </article>
+
+      <!-- 12 clases -->
+      <article class="plan-card">
+        <p class="plan-name">Dedicación</p>
+        <p class="plan-classes">12 <small>clases</small></p>
+        <p class="plan-price"><span>$</span><b>175.000</b></p>
+        <p class="plan-period">Válido 30 días · COP</p>
+        <span class="plan-perclass">$14.583 por clase</span>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>12 clases al mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Todas las disciplinas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mejor precio por clase</li>
+        </ul>
+        <button class="btn btn-primary plan-cta" data-add data-name="Plan 12 clases" data-price="175000" data-pack="12">Elegir plan</button>
+      </article>
+
+      <!-- Ilimitado · PREMIUM -->
+      <article class="plan-card premium">
+        <span class="plan-badge">Mejor valor</span>
+        <p class="plan-name">Ilimitado</p>
+        <p class="plan-classes">∞ <small>clases ilimitadas</small></p>
+        <p class="plan-price"><span>$</span><b>205.000</b></p>
+        <p class="plan-period">Válido 30 días · COP</p>
+        <span class="plan-perclass">Práctica sin límites</span>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Clases ilimitadas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Todas las disciplinas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Máxima flexibilidad</li>
+        </ul>
+        <button class="btn btn-primary plan-cta" data-add data-name="Plan Ilimitado" data-price="205000" data-pack="31">Elegir plan</button>
+      </article>
+    </div>
+
+    <div class="planes-note fade-up">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Todos los planes válidos por un mes</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sin permanencia</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Acceso a todas las disciplinas</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-head fade-up">
+      <p class="section-eyebrow">PREGUNTAS FRECUENTES</p>
+      <h2 class="section-title">Antes de elegir tu plan</h2>
+    </div>
+    <div class="faq-grid fade-up">
+      <div class="faq-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>¿Los planes tienen permanencia?</h3>
+        <p>No. Cada plan es válido por un mes desde su activación, sin renovaciones automáticas ni cláusulas de permanencia.</p>
+      </div>
+      <div class="faq-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>¿Puedo usarlo en cualquier disciplina?</h3>
+        <p>Sí. Todos los planes dan acceso a todas las disciplinas disponibles en nuestro horario: Hatha, Kundalini, Yin, Bhakti, meditación y más.</p>
+      </div>
+      <div class="faq-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>¿Cómo reservo mis clases?</h3>
+        <p>Una vez activo tu plan, reservas desde nuestro calendario en línea. Confirmación inmediata y puedes cancelar hasta 3 horas antes.</p>
+      </div>
+      <div class="faq-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>¿Cómo realizo el pago?</h3>
+        <p>Por ahora coordinamos el pago por WhatsApp con el detalle de tu carrito. Muy pronto habilitaremos pasarela de pago en línea directamente aquí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>¿No sabes cuál plan elegir?</h2>
+    <p>Cuéntanos cómo quieres sentirte y te ayudamos a encontrar el plan ideal para tu práctica.</p>
+    <a href="https://wa.me/573000000000?text=Hola%20Bhumi%20%F0%9F%8C%BF%20Quiero%20asesor%C3%ADa%20para%20elegir%20mi%20plan%20de%20clases." target="_blank" rel="noopener" class="btn btn-light" style="background:white;color:var(--rojo);box-shadow:0 8px 24px rgba(0,0,0,.12);">Hablar con Bhumi por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <img src="assets/logos/bhumi-logo-white.png" alt="Bhumi Yoga">
+  <nav class="footer-links">
+    <a href="/#inicio">Inicio</a>
+    <a href="/#intencion">Clases</a>
+    <a href="/planes">Planes</a>
+    <a href="/#talleres">Eventos</a>
+    <a href="/#tienda">Tienda</a>
+    <a href="/#conocenos">Conócenos</a>
+  </nav>
+  <p class="footer-copy">© 2026 Bhumi Yoga Academy · Armenia, Quindío</p>
+</footer>
+
+<!-- ══ CARRITO ══ -->
+<button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+  <span class="cart-count" id="cart-count" style="display:none;">0</span>
+</button>
+<div class="cart-backdrop" id="cart-backdrop"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compra">
+  <div class="cart-head">
+    <h3>Tu carrito</h3>
+    <button class="cart-close" id="cart-close" aria-label="Cerrar carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <p style="text-align:center;color:var(--salvia);padding:32px 0;font-size:14px;">Tu carrito está vacío.</p>
+  </div>
+  <div class="cart-foot">
+    <p class="cart-hint" id="cart-hint" style="display:none;">Inicia sesión para vincular tu compra a tu perfil Bhumi (opcional).</p>
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0 COP</span></div>
+    <a href="#" id="cart-checkout" class="btn btn-primary">Comprar por WhatsApp</a>
+  </div>
+</aside>
+
+<!-- ══ SCRIPTS ══ -->
+<script>
+  // Nav hamburger
+  const ham = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    ham.setAttribute('aria-expanded', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Fade-up observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Cart
+  const cart = { items: [], total: 0 };
+  const drawer = document.getElementById('cart-drawer');
+  const backdrop = document.getElementById('cart-backdrop');
+  const openCart = () => { drawer.classList.add('open'); backdrop.classList.add('open'); };
+  const closeCart = () => { drawer.classList.remove('open'); backdrop.classList.remove('open'); };
+  document.getElementById('cart-toggle').addEventListener('click', openCart);
+  document.getElementById('cart-close').addEventListener('click', closeCart);
+  backdrop.addEventListener('click', closeCart);
+  const tagIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>';
+  const renderCart = () => {
+    const list = document.getElementById('cart-items');
+    list.innerHTML = cart.items.length === 0
+      ? '<p style="text-align:center;color:var(--salvia);padding:32px 0;font-size:14px;">Tu carrito está vacío.</p>'
+      : cart.items.map((i, idx) => `<div class="cart-item">
+          <div class="cart-item-icon">${tagIcon}</div>
+          <div class="cart-item-info"><div class="cart-item-name">${i.name}</div><div class="cart-item-price">$${i.price.toLocaleString('es-CO')} COP</div></div>
+          <button class="cart-item-remove" type="button" aria-label="Quitar ${i.name}" data-remove="${idx}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>`).join('');
+    cart.total = cart.items.reduce((a, b) => a + b.price, 0);
+    document.getElementById('cart-total').textContent = '$' + cart.total.toLocaleString('es-CO') + ' COP';
+    const count = document.getElementById('cart-count');
+    count.textContent = cart.items.length;
+    count.style.display = cart.items.length ? 'flex' : 'none';
+    const hint = document.getElementById('cart-hint');
+    hint.style.display = (cart.items.length && !window._bhumiUser) ? 'block' : 'none';
+  };
+  document.querySelectorAll('[data-add]').forEach(btn => btn.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    cart.items.push({ name: btn.dataset.name, price: parseInt(btn.dataset.price, 10), pack: btn.dataset.pack || '' });
+    renderCart(); openCart();
+  }));
+  document.getElementById('cart-items').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-remove]');
+    if (!btn) return;
+    cart.items.splice(parseInt(btn.dataset.remove, 10), 1);
+    renderCart();
+  });
+
+  // Checkout → WhatsApp (mientras no hay pasarela de pago)
+  document.getElementById('cart-checkout').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (cart.items.length === 0) return;
+    const lineas = cart.items.map(i => `• ${i.name} — $${i.price.toLocaleString('es-CO')} COP`).join('\n');
+    const total = '$' + cart.total.toLocaleString('es-CO') + ' COP';
+    const u = window._bhumiUser;
+    const saludo = u ? `Hola Bhumi 🌿 Soy ${u.name || u.email}${u.email && u.name ? ` (${u.email})` : ''}. Quiero adquirir:` : 'Hola Bhumi 🌿 Quiero adquirir el siguiente plan:';
+    const mensaje = `${saludo}\n${lineas}\n\nTotal: ${total}`;
+    window.open('https://wa.me/573000000000?text=' + encodeURIComponent(mensaje), '_blank', 'noopener');
+  });
+
+  // User dropdown
+  const navUserEl = document.getElementById('nav-user');
+  navUserEl.addEventListener('click', e => { navUserEl.classList.toggle('open'); e.stopPropagation(); });
+  document.addEventListener('click', () => navUserEl.classList.remove('open'));
+
+  // Auth modal helpers
+  window.openAuthModal = (e) => { if (e) e.preventDefault(); document.getElementById('auth-overlay').style.display = 'flex'; return false; };
+  window.closeAuthModal = () => { document.getElementById('auth-overlay').style.display = 'none'; document.getElementById('auth-error').textContent = ''; };
+  document.getElementById('auth-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('auth-overlay')) window.closeAuthModal();
+  });
+  window.toggleAuthMode = (mode) => {
+    const isReg = mode === 'register';
+    document.getElementById('auth-title').textContent = isReg ? 'Crear cuenta' : 'Ingresar';
+    document.getElementById('auth-submit').textContent = isReg ? 'CREAR CUENTA' : 'ENTRAR';
+    document.getElementById('auth-toggle-text').innerHTML = isReg
+      ? '¿Ya tienes cuenta? <span class="auth-link" onclick="toggleAuthMode(\'login\')">Ingresar</span>'
+      : '¿Primera vez aquí? <span class="auth-link" onclick="toggleAuthMode(\'register\')">Crear cuenta</span>';
+    document.getElementById('auth-error').textContent = '';
+    document.getElementById('auth-pass').autocomplete = isReg ? 'new-password' : 'current-password';
+    window._authIsRegister = isReg;
+  };
+  window._authIsRegister = false;
+</script>
+
+<!-- ══ FIREBASE AUTH (module) ══ -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "DEMO_FIREBASE_API_KEY",
+    authDomain: "demo-yoga.app",
+    projectId: "bhumi-demo",
+    storageBucket: "bhumi-demo.appspot.com",
+    messagingSenderId: "000000000000",
+    appId: "1:000000000000:web:c961cf6a2cbef3ca9ba97c",
+    measurementId: "G-CP37JSFHNF"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+
+  const navEntrar = document.getElementById('nav-entrar');
+  const navUser = document.getElementById('nav-user');
+  const userAvatar = document.getElementById('user-avatar');
+  const userEmailLabel = document.getElementById('user-email-label');
+  const authError = document.getElementById('auth-error');
+
+  function authMsg(code) {
+    const msgs = {
+      'auth/wrong-password': 'Contraseña incorrecta.',
+      'auth/invalid-credential': 'Correo o contraseña incorrectos.',
+      'auth/invalid-email': 'Correo inválido.',
+      'auth/email-already-in-use': 'El correo ya está registrado.',
+      'auth/weak-password': 'La contraseña debe tener al menos 6 caracteres.',
+      'auth/user-not-found': 'No existe una cuenta con este correo.',
+      'auth/too-many-requests': 'Demasiados intentos. Espera un momento.',
+    };
+    return msgs[code] || 'Ocurrió un error. Intenta de nuevo.';
+  }
+
+  document.getElementById('auth-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    authError.textContent = '';
+    const email = document.getElementById('auth-email').value.trim();
+    const pass = document.getElementById('auth-pass').value;
+    try {
+      if (window._authIsRegister) {
+        await createUserWithEmailAndPassword(auth, email, pass);
+      } else {
+        await signInWithEmailAndPassword(auth, email, pass);
+      }
+      window.closeAuthModal();
+    } catch (err) {
+      authError.textContent = authMsg(err.code);
+    }
+  });
+
+  window.doGoogleLogin = async () => {
+    authError.textContent = '';
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      window.closeAuthModal();
+    } catch (e) {
+      if (e.code !== 'auth/popup-closed-by-user' && e.code !== 'auth/cancelled-popup-request') {
+        authError.textContent = 'Error con Google. Intenta con correo.';
+      }
+    }
+  };
+
+  window.doLogout = async () => { await signOut(auth); };
+
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      window._bhumiUser = { email: user.email || '', name: user.displayName || '' };
+      navEntrar.style.display = 'none';
+      navUser.style.display = 'flex';
+      userEmailLabel.textContent = user.email || '';
+      if (user.photoURL) {
+        userAvatar.innerHTML = `<img src="${user.photoURL}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="">`;
+      } else {
+        userAvatar.textContent = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+      }
+    } else {
+      window._bhumiUser = null;
+      navEntrar.style.display = 'flex';
+      navUser.style.display = 'none';
+    }
+    const hint = document.getElementById('cart-hint');
+    if (hint && hint.style.display !== 'none') hint.style.display = window._bhumiUser ? 'none' : hint.style.display;
+  });
+</script>
+</body>
+</html>

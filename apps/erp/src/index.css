@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Manual de marca Bhumi: Hurme Geometric Sans 4 → alternativa web Poppins */
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta Corporativa Bhumi:
+     Rojo Tierra (#cf5038), Naranja Cálido (#f59855), Navy (#1a2a51), Gris Salvia (#869a97)
+  */
+  --color-sage-50: #f5f7fa;
+  --color-sage-100: #eaedf4;
+  --color-sage-200: #d5dce8;
+  --color-sage-300: #aeb9cc;
+  --color-sage-400: #869a97; /* Gris Salvia — texto secundario */
+  --color-sage-500: #869a97; /* Gris Salvia — iconos */
+  --color-sage-600: #cf5038; /* Rojo Tierra — CTAs y acciones principales */
+  --color-sage-700: #b54530; /* Rojo Tierra oscuro — hover */
+  --color-sage-800: #f59855; /* Naranja Cálido — acentos */
+  --color-sage-900: #1a2a51; /* Navy — texto principal y fondos oscuros */
+
+  /* Fondos neutros cálidos (manual: #fdf8f5 blanco cálido) */
+  --color-warm-50: #ffffff;
+  --color-warm-100: #fdf8f5;
+  --color-warm-200: #f6ede7;
+  --color-warm-300: #ecdfd6;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-100 text-sage-900 font-sans antialiased;
+  }
+
+  ::selection {
+    background: rgba(207, 80, 56, 0.18);
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #ecdfd6; border-radius: 99px; border: 2px solid #fdf8f5; }
+  ::-webkit-scrollbar-thumb:hover { background: #869a97; }
+}
+
+@layer utilities {
+  /* Entrada suave de vistas y tarjetas (manual: animaciones 300-500ms, ease-in-out) */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes toastIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%      { transform: translate(18px, -14px) scale(1.06); }
+  }
+
+  @keyframes barShine {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(250%); }
+  }
+
+  .animate-fadeUp { animation: fadeUp 0.45s ease-in-out both; }
+  .animate-toastIn { animation: toastIn 0.35s ease-in-out both; }
+
+  /* Retardos para entradas escalonadas */
+  .d-1 { animation-delay: 70ms; }
+  .d-2 { animation-delay: 140ms; }
+  .d-3 { animation-delay: 210ms; }
+  .d-4 { animation-delay: 280ms; }
+  .d-5 { animation-delay: 350ms; }
+
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    pointer-events: none;
+    animation: drift 12s ease-in-out infinite;
+  }
+
+  /* Hover de tarjetas: elevación suave (manual: dinamismo controlado) */
+  .card-lift {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  .card-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px -12px rgba(26, 42, 81, 0.16);
+    border-color: rgba(207, 80, 56, 0.25);
+  }
+
+  /* Brillo que recorre barras de progreso */
+  .bar-shine {
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: barShine 2.4s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fadeUp, .animate-toastIn, .orb, .bar-shine { animation: none !important; }
+    .card-lift:hover { transform: none; }
+  }
+}

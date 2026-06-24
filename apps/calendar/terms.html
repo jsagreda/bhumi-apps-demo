@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — Bhumi Yoga Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage:    #7A9E7E;
+      --sage-d:  #5A7E5E;
+      --navy:    #2C3E50;
+      --cream:   #FAF8F3;
+      --fog:     #A0A0A0;
+      --outline: #E5E0D8;
+      --text:    #2C2C2C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      header { padding: 16px 32px; }
+    }
+
+    header .logo-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    header .logo-mark img { height: 40px; width: auto; object-fit: contain; display: block; }
+
+    header .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    header .brand .brand-name {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-name { font-size: 1.125rem; }
+    }
+
+    header .brand .brand-name .yoga-word { color: #cf5038; }
+
+    header .brand .brand-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 600;
+      color: #869a97;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-tag { font-size: 0.6rem; }
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    .toc {
+      background: #fff;
+      border: 1px solid var(--outline);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fog);
+      margin-bottom: 14px;
+    }
+
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--sage-d); text-decoration: none; font-size: 0.875rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 50%;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #444; }
+
+    .highlight-box {
+      background: #EDF4EE;
+      border-left: 3px solid var(--sage);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: var(--sage-d); font-size: 0.875rem; font-weight: 500; }
+
+    .warning-box {
+      background: #FFF8ED;
+      border-left: 3px solid #E5A827;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .warning-box p { margin-bottom: 0; color: #8A5F00; font-size: 0.875rem; font-weight: 500; }
+
+    .contact-card {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .contact-card a { color: #A8C9AB; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card p { color: rgba(255,255,255,0.75); margin-bottom: 6px; font-size: 0.875rem; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.8rem;
+      color: var(--fog);
+    }
+
+    footer a { color: var(--sage-d); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="/logo.png" alt="Bhumi Yoga" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="yoga-word">Yoga</span></span>
+    <span class="brand-tag">Studio</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Documento Legal</div>
+  <h1>Términos y Condiciones</h1>
+  <p class="meta">Última actualización: 18 de mayo de 2025 &nbsp;·&nbsp; Versión 1.0</p>
+
+  <div class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">Aceptación de los términos</a></li>
+      <li><a href="#s2">Descripción del servicio</a></li>
+      <li><a href="#s3">Registro y cuenta de usuario</a></li>
+      <li><a href="#s4">Reserva de clases</a></li>
+      <li><a href="#s5">Cancelaciones y política de asistencia</a></li>
+      <li><a href="#s6">Paquetes y membresías</a></li>
+      <li><a href="#s7">Uso de Google Calendar</a></li>
+      <li><a href="#s8">Conducta del usuario</a></li>
+      <li><a href="#s9">Propiedad intelectual</a></li>
+      <li><a href="#s10">Limitación de responsabilidad</a></li>
+      <li><a href="#s11">Modificaciones del servicio</a></li>
+      <li><a href="#s12">Ley aplicable</a></li>
+      <li><a href="#s13">Contacto</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">1</span>Aceptación de los términos</h2>
+    <p>Al registrarte o usar la aplicación web de <strong>Bhumi Yoga Studio</strong> ("la aplicación", "el servicio"), aceptas estar vinculado por estos Términos y Condiciones ("Términos"). Si no estás de acuerdo con alguno de ellos, no debes usar el servicio.</p>
+    <p>Estos Términos constituyen el acuerdo completo entre tú y Bhumi Yoga Studio con respecto al uso de la aplicación.</p>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">2</span>Descripción del servicio</h2>
+    <p>La aplicación de Bhumi Yoga Studio permite a sus usuarios:</p>
+    <ul>
+      <li>Ver el horario de clases disponibles del estudio.</li>
+      <li>Reservar un lugar en clases de yoga presenciales.</li>
+      <li>Consultar el historial de clases reservadas y asistidas.</li>
+      <li>Agregar automáticamente las clases reservadas a Google Calendar (función opcional).</li>
+      <li>Gestionar paquetes de clases adquiridos en el estudio.</li>
+    </ul>
+    <p>El servicio está disponible en Colombia y está destinado a personas mayores de 14 años. Los menores entre 14 y 18 años deben contar con autorización de un padre o tutor legal.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">3</span>Registro y cuenta de usuario</h2>
+    <p>Para acceder al servicio debes crear una cuenta mediante:</p>
+    <ul>
+      <li>Correo electrónico y contraseña.</li>
+      <li>Inicio de sesión con Google.</li>
+      <li>Número de teléfono celular (verificación por código SMS).</li>
+    </ul>
+    <p>Eres responsable de mantener la confidencialidad de tus credenciales y de todas las actividades que ocurran bajo tu cuenta. Notifícanos de inmediato si sospechas de un acceso no autorizado.</p>
+    <p>Bhumi Yoga Studio se reserva el derecho de suspender o eliminar cuentas que violen estos Términos.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">4</span>Reserva de clases</h2>
+    <p>Las reservas están sujetas a disponibilidad. Al reservar una clase:</p>
+    <ul>
+      <li>Se descuenta una clase de tu paquete activo (si aplica).</li>
+      <li>Tu lugar queda confirmado hasta el inicio de la clase.</li>
+      <li>Debes llegar al estudio <strong>al menos 10 minutos antes</strong> del inicio de la clase para garantizar tu lugar.</li>
+    </ul>
+    <div class="warning-box">
+      <p>Si llegas después del inicio de la clase, el instructor puede no permitirte el ingreso para no interrumpir la sesión en curso.</p>
+    </div>
+    <p>Bhumi Yoga Studio puede cancelar o modificar clases por razones de fuerza mayor (enfermedad del instructor, cierre del estudio, etc.). En estos casos, se realizará la devolución de la clase al paquete del usuario.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">5</span>Cancelaciones y política de asistencia</h2>
+    <p>Para cancelar una reserva sin penalización, debes hacerlo con una anticipación mínima definida por el estudio. Consulta el horario en la aplicación para los tiempos vigentes.</p>
+    <ul>
+      <li>Cancelaciones con tiempo suficiente de anticipación: la clase se devuelve a tu paquete.</li>
+      <li>Ausencias sin cancelación (no-show): la clase se considera consumida.</li>
+      <li>Cancelaciones tardías: la clase puede considerarse consumida según la política vigente del estudio.</li>
+    </ul>
+    <p>Esta política existe para garantizar que los lugares disponibles puedan ser aprovechados por otros estudiantes.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">6</span>Paquetes y membresías</h2>
+    <p>Los paquetes de clases y membresías son gestionados directamente por el equipo de Bhumi Yoga Studio. A través de la aplicación puedes consultar el estado de tu paquete activo.</p>
+    <ul>
+      <li>Los paquetes tienen una <strong>fecha de vencimiento</strong>. Las clases no utilizadas dentro del período de validez se perderán al vencer.</li>
+      <li>Los paquetes no son transferibles a otras personas.</li>
+      <li>Los pagos se realizan directamente en el estudio o por los canales de pago acordados con Bhumi Yoga Studio. La aplicación no procesa pagos en línea.</li>
+      <li>No se realizan reembolsos por clases ya utilizadas.</li>
+    </ul>
+    <p>Para consultas sobre pagos, renovaciones o casos especiales, contáctanos directamente por WhatsApp o correo electrónico.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">7</span>Uso de Google Calendar</h2>
+    <p>La integración con Google Calendar es una función <strong>completamente voluntaria</strong>. Al activarla, autorizas a Bhumi Yoga Studio a:</p>
+    <ul>
+      <li>Crear eventos en tu Google Calendar personal correspondientes a las clases que reservas.</li>
+      <li>Leer eventos del rango de fechas pertinente únicamente para evitar conflictos de horario.</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Bhumi Yoga Studio no accede, modifica ni elimina eventos de tu calendario que no hayan sido creados por nuestra aplicación. Nunca compartimos tu información de calendario con terceros.</p>
+    </div>
+    <p>Puedes revocar este acceso en cualquier momento desde tu cuenta de Google: <strong>myaccount.google.com → Seguridad → Aplicaciones de terceros</strong>.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">8</span>Conducta del usuario</h2>
+    <p>Al usar la aplicación, te comprometes a no:</p>
+    <ul>
+      <li>Proporcionar información falsa o engañosa en tu perfil.</li>
+      <li>Usar la aplicación para fines distintos a la gestión de tus clases en Bhumi Yoga.</li>
+      <li>Intentar acceder a cuentas de otros usuarios.</li>
+      <li>Interferir con el funcionamiento normal de la aplicación.</li>
+      <li>Usar herramientas automatizadas (bots, scrapers) para interactuar con el servicio.</li>
+    </ul>
+    <p>El incumplimiento de estas normas puede resultar en la suspensión inmediata de tu cuenta.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">9</span>Propiedad intelectual</h2>
+    <p>Todo el contenido de la aplicación —incluyendo el diseño, logotipos, textos, imágenes y código fuente— es propiedad exclusiva de Bhumi Yoga Studio o de sus licenciantes y está protegido por las leyes de propiedad intelectual de Colombia.</p>
+    <p>No está permitido reproducir, distribuir, modificar ni crear obras derivadas de ningún elemento de la aplicación sin autorización expresa y escrita de Bhumi Yoga Studio.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span>Limitación de responsabilidad</h2>
+    <p>La aplicación se proporciona "tal cual" y "según disponibilidad". Bhumi Yoga Studio no garantiza que el servicio sea ininterrumpido, libre de errores o esté disponible en todo momento.</p>
+    <p>En ningún caso Bhumi Yoga Studio será responsable por:</p>
+    <ul>
+      <li>Pérdida de datos derivada de fallos técnicos fuera de nuestro control.</li>
+      <li>Daños indirectos, incidentales o consecuentes derivados del uso o imposibilidad de uso del servicio.</li>
+      <li>Interrupciones del servicio causadas por mantenimiento, fuerza mayor o causas externas.</li>
+    </ul>
+    <p>Nuestra responsabilidad máxima ante cualquier reclamación relacionada con el uso de la aplicación se limita al valor de las clases no consumidas en tu paquete activo al momento del incidente.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span>Modificaciones del servicio</h2>
+    <p>Bhumi Yoga Studio se reserva el derecho de modificar, suspender o discontinuar el servicio (o cualquier parte de él) en cualquier momento, con o sin previo aviso.</p>
+    <p>También podemos actualizar estos Términos periódicamente. Te notificaremos sobre cambios materiales a través de la aplicación o por correo electrónico. El uso continuado del servicio después de la publicación de cambios constituye tu aceptación de los nuevos Términos.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2><span class="num">12</span>Ley aplicable</h2>
+    <p>Estos Términos se rigen e interpretan de conformidad con las leyes de la <strong>República de Colombia</strong>, incluyendo pero no limitado a:</p>
+    <ul>
+      <li>Ley 1480 de 2011 — Estatuto del Consumidor.</li>
+      <li>Ley 1581 de 2012 — Régimen de Protección de Datos Personales.</li>
+      <li>Ley 527 de 1999 — Comercio Electrónico.</li>
+    </ul>
+    <p>Cualquier controversia que surja en relación con estos Términos será sometida a la jurisdicción de los tribunales competentes de Colombia.</p>
+  </section>
+
+  <!-- 13 -->
+  <section id="s13">
+    <h2><span class="num">13</span>Contacto</h2>
+    <p>Si tienes preguntas o inquietudes sobre estos Términos, contáctanos:</p>
+    <div class="contact-card">
+      <h3>Bhumi Yoga Studio</h3>
+      <p>Correo electrónico: <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></p>
+      <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank">+57 300 131 8160</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></p>
+      <p style="margin-top:12px; font-size:0.78rem; opacity:0.6;">Colombia &nbsp;·&nbsp; Ley 1480 de 2011 &nbsp;·&nbsp; Ley 1581 de 2012</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Studio &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Bhumi Yoga Academy</title>
+  <meta name="description" content="Política de privacidad del sitio web de Bhumi Yoga Academy. Cómo tratamos tus datos personales conforme a la Ley 1581 de 2012." />
+  <link rel="icon" type="image/png" href="assets/isotipos/bhumi-isotipo-color.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:    #1a2a51;
+      --rojo:    #cf5038;
+      --rojo-h:  #b8442e;
+      --crema:   #fdf8f5;
+      --arena:   #f1e7da;
+      --salvia:  #869a97;
+      --fog:     #a0a0a0;
+      --outline: #e8ddd4;
+      --text:    #2c2c2c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--crema);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) { header { padding: 16px 40px; } }
+
+    header .logo-mark img { height: 42px; width: auto; display: block; }
+
+    header .brand { display: flex; flex-direction: column; line-height: 1.15; }
+
+    header .brand .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 640px) { header .brand .brand-name { font-size: 1.1rem; } }
+
+    header .brand .brand-name .rojo { color: var(--rojo); }
+
+    header .brand .brand-tag {
+      font-size: 0.52rem;
+      font-weight: 600;
+      color: var(--salvia);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+
+    /* ── Doc badge ── */
+    .doc-badge {
+      display: inline-block;
+      background: var(--rojo);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 4px 13px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Headings ── */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: #fff;
+      border: 1px solid var(--outline);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fog);
+      margin-bottom: 14px;
+    }
+
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--rojo-h); text-decoration: none; font-size: 0.875rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--rojo);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.68rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #444; }
+
+    /* ── Boxes ── */
+    .highlight-box {
+      background: #fef4f2;
+      border-left: 3px solid var(--rojo);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: #8b3c2c; font-size: 0.875rem; font-weight: 500; }
+
+    .info-box {
+      background: var(--arena);
+      border-left: 3px solid var(--salvia);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .info-box p { margin-bottom: 0; color: #5a6b68; font-size: 0.875rem; font-weight: 500; }
+
+    .warning-box {
+      background: #fff8ed;
+      border-left: 3px solid #e5a827;
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .warning-box p { margin-bottom: 0; color: #8a5f00; font-size: 0.875rem; font-weight: 500; }
+
+    /* ── Table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.875rem;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--outline);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #fdf5f3; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+
+    .contact-card a { color: #f4b8ab; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card p { color: rgba(255,255,255,0.75); margin-bottom: 6px; font-size: 0.875rem; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.78rem;
+      color: var(--fog);
+      background: var(--crema);
+    }
+
+    footer a { color: var(--rojo); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    a { color: var(--rojo); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="assets/isotipos/bhumi-isotipo-color.png" alt="Bhumi Yoga Academy" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="rojo">Yoga</span> Academy</span>
+    <span class="brand-tag">Armenia · Quindío</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Documento Legal · Bhumi Web</div>
+  <h1>Política de Privacidad</h1>
+  <p class="meta">Última actualización: 16 de junio de 2026 &nbsp;·&nbsp; Versión 2.0 &nbsp;·&nbsp; Sitio web demo-yoga.app</p>
+
+  <div class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">¿Quiénes somos?</a></li>
+      <li><a href="#s2">Datos que recopilamos</a></li>
+      <li><a href="#s3">Finalidad del tratamiento</a></li>
+      <li><a href="#s4">Base legal del tratamiento</a></li>
+      <li><a href="#s5">Cuenta de usuario y autenticación</a></li>
+      <li><a href="#s6">Inicio de sesión con Google</a></li>
+      <li><a href="#s7">Compras y pagos</a></li>
+      <li><a href="#s8">Cookies y tecnologías similares</a></li>
+      <li><a href="#s9">Compartición de datos con terceros</a></li>
+      <li><a href="#s10">Almacenamiento y seguridad</a></li>
+      <li><a href="#s11">Tus derechos (Habeas Data)</a></li>
+      <li><a href="#s12">Retención de datos</a></li>
+      <li><a href="#s13">Cambios a esta política</a></li>
+      <li><a href="#s14">Contacto</a></li>
+    </ol>
+  </div>
+
+  <div class="info-box">
+    <p>Esta política aplica al <strong>sitio web demo-yoga.app</strong>, incluyendo su funcionalidad de cuenta de usuario y tienda, y cumple con la Ley 1581 de 2012 y el Decreto 1377 de 2013 (régimen de protección de datos personales de Colombia).</p>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">1</span>¿Quiénes somos?</h2>
+    <p><strong>Bhumi Yoga Academy</strong> es una academia boutique de yoga con sede en Armenia, Quindío, Colombia. Ofrecemos clases presenciales, talleres, retiros y una tienda de productos esenciales para la práctica.</p>
+    <p>El sitio web <strong>demo-yoga.app</strong> presenta nuestros servicios, filosofía y comunidad, y permite crear una cuenta de usuario para explorar y comprar productos de nuestra tienda esencial.</p>
+    <p>Para los efectos de esta política, Bhumi Yoga Academy actúa como <strong>responsable del tratamiento</strong> de los datos personales recopilados en este sitio.</p>
+    <ul>
+      <li><strong>Sitio web:</strong> <a href="https://demo-yoga.app" target="_blank">demo-yoga.app</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></li>
+      <li><strong>WhatsApp / Teléfono:</strong> +57 300 131 8160</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></li>
+    </ul>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">2</span>Datos que recopilamos</h2>
+    <p>Recopilamos los datos estrictamente necesarios para prestarte los servicios disponibles en este sitio:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Datos específicos</th>
+          <th>Fuente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cuenta de usuario</td>
+          <td>Nombre, correo electrónico, contraseña (almacenada cifrada)</td>
+          <td>Registro voluntario en el sitio</td>
+        </tr>
+        <tr>
+          <td>Cuenta Google</td>
+          <td>Nombre, foto de perfil pública, dirección de correo Google</td>
+          <td>Google Sign-In (con tu autorización, función opcional)</td>
+        </tr>
+        <tr>
+          <td>Contacto voluntario</td>
+          <td>Nombre, correo electrónico, número de teléfono, mensaje</td>
+          <td>Formulario de contacto o enlace a WhatsApp</td>
+        </tr>
+        <tr>
+          <td>Compras (tienda)</td>
+          <td>Productos seleccionados, datos de contacto para coordinar la entrega</td>
+          <td>Generado al usar el catálogo / checkout por WhatsApp</td>
+        </tr>
+        <tr>
+          <td>Navegación</td>
+          <td>Páginas visitadas, tiempo de sesión, tipo de dispositivo, país de acceso</td>
+          <td>Google Analytics (de forma anonimizada)</td>
+        </tr>
+        <tr>
+          <td>Técnicos</td>
+          <td>Dirección IP, datos de sesión (token de autenticación), tipo de navegador</td>
+          <td>Automático al usar el sitio / Firebase Authentication</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <p>Este sitio web <strong>no</strong> solicita acceso a tu Google Calendar ni a otros datos de tu cuenta de Google distintos a tu nombre, correo y foto de perfil. Tampoco almacena datos completos de tarjetas o métodos de pago mientras las compras se coordinen por WhatsApp. No procesamos información de salud ni otra categoría de datos sensibles.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">3</span>Finalidad del tratamiento</h2>
+    <p>Usamos los datos recopilados para:</p>
+    <ul>
+      <li>Crear y gestionar tu cuenta de usuario en el sitio.</li>
+      <li>Autenticarte cuando inicias sesión, incluyendo mediante Google Sign-In.</li>
+      <li>Responder consultas o solicitudes de información que nos envíes a través del sitio.</li>
+      <li>Coordinar contigo la compra, el pago y la entrega de productos de la tienda esencial.</li>
+      <li>Entender cómo se usa el sitio para mejorar su contenido y experiencia de navegación.</li>
+      <li>Garantizar el correcto funcionamiento técnico y la seguridad del sitio web.</li>
+      <li>Cumplir con obligaciones legales que puedan aplicar.</li>
+    </ul>
+    <p>No utilizamos tus datos para publicidad de terceros, campañas de marketing automatizado, ni para crear perfiles comerciales.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">4</span>Base legal del tratamiento</h2>
+    <p>De acuerdo con la Ley 1581 de 2012, el tratamiento de tus datos se basa en:</p>
+    <ul>
+      <li><strong>Tu consentimiento libre e informado</strong>, otorgado al crear tu cuenta, al iniciar sesión con Google, al enviarnos un mensaje de contacto o al aceptar el uso de cookies analíticas.</li>
+      <li><strong>La ejecución del servicio solicitado</strong>, es decir, la gestión de tu cuenta y la coordinación de tus compras en la tienda esencial.</li>
+      <li><strong>Nuestro interés legítimo</strong> en mantener la seguridad y el rendimiento del sitio web.</li>
+    </ul>
+    <p>Puedes revocar tu consentimiento en cualquier momento escribiéndonos a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a>, sin que esto afecte la licitud del tratamiento previo a la revocación.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">5</span>Cuenta de usuario y autenticación</h2>
+    <p>El sitio te permite crear una cuenta mediante correo electrónico y contraseña. Esta funcionalidad utiliza <strong>Firebase Authentication</strong> (servicio de Google) para gestionar el registro y el inicio de sesión de forma segura.</p>
+    <ul>
+      <li>Tu contraseña se almacena de forma cifrada; Bhumi Yoga Academy no tiene acceso a tu contraseña en texto plano.</li>
+      <li>El token de sesión generado al iniciar sesión se utiliza únicamente para mantenerte autenticado durante tu visita al sitio.</li>
+      <li>Puedes solicitar la eliminación de tu cuenta y de los datos asociados en cualquier momento escribiéndonos a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a>.</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">6</span>Inicio de sesión con Google</h2>
+    <p>Como alternativa al registro con correo y contraseña, puedes iniciar sesión usando tu cuenta de Google (Google Sign-In). Esta función es <strong>completamente voluntaria</strong>.</p>
+    <p>Cuando utilizas esta opción, recibimos de Google únicamente:</p>
+    <ul>
+      <li>Tu nombre.</li>
+      <li>Tu dirección de correo electrónico de Google.</li>
+      <li>Tu foto de perfil pública (si está disponible).</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>Bhumi Yoga Academy <strong>nunca</strong> solicita ni obtiene acceso a tu Google Calendar, Gmail, Drive ni a ningún otro servicio o dato de tu cuenta de Google a través de esta función. El alcance se limita estrictamente a la identificación básica necesaria para crear tu cuenta (scope: <code>profile</code>, <code>email</code>).</p>
+    </div>
+
+    <p>Puedes revocar este permiso en cualquier momento desde tu cuenta Google en: <strong>myaccount.google.com → Seguridad → Aplicaciones de terceros con acceso a tu cuenta</strong>.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">7</span>Compras y pagos</h2>
+    <p>El sitio incluye un catálogo de productos de nuestra tienda esencial. Actualmente, al iniciar una compra se te redirige a una conversación de <strong>WhatsApp</strong> con nuestro equipo, donde se coordina el pago y la entrega.</p>
+
+    <div class="warning-box">
+      <p>Bhumi Yoga Academy planea incorporar próximamente una <strong>pasarela de pago en línea</strong> para procesar compras directamente en el sitio. Cuando esto se implemente, actualizaremos esta política para detallar el proveedor de pagos certificado utilizado y el tratamiento específico de los datos de pago, y te lo notificaremos de forma visible en el sitio.</p>
+    </div>
+
+    <p>Mientras el pago se gestione por WhatsApp, este sitio web <strong>no</strong> recopila, almacena ni procesa datos de tarjetas de crédito/débito ni otra información financiera sensible. Esos datos, si los compartes, quedan sujetos a las políticas de privacidad de WhatsApp/Meta.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">8</span>Cookies y tecnologías similares</h2>
+    <p>Este sitio puede utilizar cookies y tecnologías de seguimiento con los siguientes fines:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de cookie</th>
+          <th>Propósito</th>
+          <th>Proveedor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estrictamente necesarias</td>
+          <td>Funcionamiento básico del sitio, mantener tu sesión iniciada, seguridad</td>
+          <td>Firebase Hosting / Firebase Authentication (Google)</td>
+        </tr>
+        <tr>
+          <td>Analíticas</td>
+          <td>Estadísticas de visitas anonimizadas para mejorar el sitio</td>
+          <td>Google Analytics (con IP anonimizada)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-box">
+      <p>No utilizamos cookies publicitarias ni de perfiles. Las cookies analíticas solo se activan si aceptas su uso. Puedes gestionar tus preferencias de cookies desde la configuración de tu navegador en cualquier momento.</p>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">9</span>Compartición de datos con terceros</h2>
+    <p>Bhumi Yoga Academy trabaja con los siguientes proveedores que pueden procesar datos como encargados del tratamiento:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Propósito</th>
+          <th>País de procesamiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Firebase Hosting</td>
+          <td>Alojamiento y entrega del sitio web</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+        <tr>
+          <td>Google Firebase Authentication</td>
+          <td>Registro e inicio de sesión de usuarios (correo/contraseña y Google Sign-In)</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+        <tr>
+          <td>Google Analytics</td>
+          <td>Estadísticas de uso del sitio web (anonimizadas)</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+        <tr>
+          <td>Google Fonts</td>
+          <td>Carga de tipografías para el diseño del sitio</td>
+          <td>EE.UU. (bajo certificación DPF)</td>
+        </tr>
+        <tr>
+          <td>Meta (WhatsApp / Instagram)</td>
+          <td>Coordinación de compras y atención al cliente; enlace a perfil público de Instagram</td>
+          <td>EE.UU.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No vendemos, alquilamos ni cedemos tus datos personales a terceros con fines comerciales. Cuando se habilite la pasarela de pago en línea, se sumará a esta tabla el proveedor de pagos certificado seleccionado.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span>Almacenamiento y seguridad</h2>
+    <p>El sitio web y los datos de cuenta de usuario se almacenan en <strong>Google Firebase</strong> (Hosting, Authentication y, si aplica, Firestore), que ofrece:</p>
+    <ul>
+      <li>Cifrado en tránsito (TLS) y en reposo (AES-256).</li>
+      <li>Contraseñas almacenadas de forma cifrada, nunca en texto plano.</li>
+      <li>Infraestructura de nivel empresarial con redundancia geográfica y protección contra ataques DDoS.</li>
+    </ul>
+    <p>Aunque implementamos medidas técnicas razonables, ningún sistema es 100% infalible. Si detectas un incidente de seguridad, repórtalo inmediatamente a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a>.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span>Tus derechos (Habeas Data)</h2>
+    <p>De conformidad con la Ley 1581 de 2012, tienes derecho a:</p>
+    <ul>
+      <li><strong>Conocer</strong> los datos personales que tenemos sobre ti.</li>
+      <li><strong>Actualizar</strong> tus datos cuando estén desactualizados o sean incorrectos.</li>
+      <li><strong>Rectificar</strong> datos inexactos o incompletos.</li>
+      <li><strong>Suprimir</strong> tus datos y tu cuenta cuando no sean necesarios para la finalidad que originó el tratamiento o cuando hayas revocado tu consentimiento.</li>
+      <li><strong>Revocar</strong> el consentimiento dado para el tratamiento.</li>
+      <li><strong>Acceder</strong> gratuitamente a tus datos personales una vez por mes natural.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, escríbenos a <strong><a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></strong> con el asunto <em>"Derechos Habeas Data"</em>. Responderemos en un plazo máximo de <strong>10 días hábiles</strong>.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2><span class="num">12</span>Retención de datos</h2>
+    <p>Conservamos tus datos mientras tu cuenta esté activa o mientras sea necesario para atender tu consulta o compra. Si solicitas la eliminación de tu cuenta:</p>
+    <ul>
+      <li>Tus datos personales serán eliminados dentro de los <strong>30 días hábiles</strong> siguientes a tu solicitud.</li>
+      <li>Los datos de mensajes de contacto se conservan por un máximo de <strong>2 años</strong> desde la última interacción, salvo obligación legal diferente.</li>
+      <li>Los datos de analítica web recopilados por Google Analytics son anonimizados y se retienen conforme a la política de retención de datos de Google (por defecto 14 meses).</li>
+    </ul>
+    <p>Puedes solicitar la eliminación de tus datos en cualquier momento escribiéndonos a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a>.</p>
+  </section>
+
+  <!-- 13 -->
+  <section id="s13">
+    <h2><span class="num">13</span>Cambios a esta política</h2>
+    <p>Podemos actualizar esta política para reflejar cambios en nuestras prácticas, en nuevas funcionalidades del sitio (como la futura pasarela de pago en línea) o en la legislación aplicable. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" al inicio del documento.</p>
+    <p>Si los cambios son sustanciales, lo comunicaremos de forma visible en el sitio web. El uso continuado del sitio tras la publicación de cambios implica la aceptación de la política actualizada.</p>
+  </section>
+
+  <!-- 14 -->
+  <section id="s14">
+    <h2><span class="num">14</span>Contacto</h2>
+    <p>Si tienes preguntas sobre esta política o sobre el tratamiento de tus datos, puedes contactarnos por cualquiera de los siguientes medios:</p>
+    <div class="contact-card">
+      <h3>Bhumi Yoga Academy</h3>
+      <p>Correo electrónico: <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></p>
+      <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank">+57 300 131 8160</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></p>
+      <p style="margin-top:12px; font-size:0.78rem; opacity:0.6;">Armenia, Quindío &nbsp;·&nbsp; Colombia &nbsp;·&nbsp; Ley 1581 de 2012</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Academy &nbsp;·&nbsp; Armenia, Quindío &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito del Sitio</a>
+</footer>
+
+</body>
+</html>

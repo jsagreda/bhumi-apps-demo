@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propósito — Bhumi Yoga Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage:    #7A9E7E;
+      --sage-d:  #5A7E5E;
+      --navy:    #2C3E50;
+      --cream:   #FAF8F3;
+      --fog:     #A0A0A0;
+      --outline: #E5E0D8;
+      --text:    #2C2C2C;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      header { padding: 16px 32px; }
+    }
+
+    header .logo-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    header .logo-mark img { height: 40px; width: auto; object-fit: contain; display: block; }
+
+    header .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    header .brand .brand-name {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-name { font-size: 1.125rem; }
+    }
+
+    header .brand .brand-name .yoga-word { color: #cf5038; }
+
+    header .brand .brand-tag {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 600;
+      color: #869a97;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    @media (min-width: 640px) {
+      header .brand .brand-tag { font-size: 0.6rem; }
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      background: var(--sage);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Raleway', 'Hurme Geometric Sans 4', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    p { margin-bottom: 14px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; color: #444; }
+
+    .highlight-box {
+      background: #EDF4EE;
+      border-left: 3px solid var(--sage);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: var(--sage-d); font-size: 0.875rem; font-weight: 500; }
+
+    .intro-lead {
+      font-size: 1.05rem;
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.8rem;
+      color: var(--fog);
+    }
+
+    footer a { color: var(--sage-d); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="/logo.png" alt="Bhumi Yoga" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="yoga-word">Yoga</span></span>
+    <span class="brand-tag">Studio</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Propósito</div>
+  <h1>Propósito de la aplicación</h1>
+  <p class="meta">Última actualización: 18 de mayo de 2025 &nbsp;·&nbsp; Versión 1.0</p>
+
+  <section>
+    <p class="intro-lead">
+      Bhumi Yoga Studio es una plataforma web de gestión de calendario para estudios de yoga.
+    </p>
+
+    <h2>¿Qué permite hacer?</h2>
+    <p>La aplicación permite a los <strong>instructores</strong>, <strong>administradores</strong> y <strong>usuarios</strong>:</p>
+    <ul>
+      <li>Reservar y gestionar una o múltiples clases de yoga.</li>
+      <li>Sincronizar eventos con Google Calendar.</li>
+      <li>Cancelar reservas.</li>
+      <li>Enviar recordatorios de clases.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>La app accede a Google Calendar únicamente para sincronizar eventos y proporcionar una mejor experiencia de programación a los usuarios.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Studio &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito</a>
+</footer>
+
+</body>
+</html>

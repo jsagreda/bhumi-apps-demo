@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hurme Geometric Sans 4", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Hurme Geometric Sans 4", "Montserrat", serif;
+
+  /* Paleta Corporativa Bhumi: 
+     Coral (#cf5038), Orange (#f59855), Navy (#1a2a51), Gray/Green (#869a97) 
+     Reasignados a las variables existentes para mantener la compatibilidad con los componentes
+  */
+  --color-sage-50: #f5f7fa;
+  --color-sage-100: #eaedf4;
+  --color-sage-200: #d5dce8;
+  --color-sage-300: #aeb9cc;
+  --color-sage-400: #869a97; /* Brand Gray/Green para textos secundarios */
+  --color-sage-500: #869a97; /* Brand Gray/Green para iconos/textos */
+  --color-sage-600: #cf5038; /* Brand Coral para botones principales */
+  --color-sage-700: #b54530; /* Coral oscuro para hovers */
+  --color-sage-800: #f59855; /* Brand Orange para acentos */
+  --color-sage-900: #1a2a51; /* Brand Navy para textos principales y encabezados */
+
+  /* Fondos neutros */
+  --color-warm-50: #ffffff;
+  --color-warm-100: #fbfbfc;
+  --color-warm-200: #f2f4f7;
+  --color-warm-300: #e4e7ec;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-100 text-sage-900 font-sans antialiased;
+  }
+
+  ::selection {
+    background-color: rgba(207, 80, 56, 0.2);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-sage-300);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-sage-400);
+  }
+}
+
+@layer utilities {
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes toastIn {
+    from { opacity: 0; transform: translate(-50%, 20px) scale(0.95); }
+    to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.05); }
+  }
+  @keyframes barShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-fadeUp {
+    animation: fadeUp 0.4s ease-in-out both;
+  }
+  .animate-toastIn {
+    animation: toastIn 0.35s ease-in-out both;
+  }
+
+  .d-1 { animation-delay: 0.05s; }
+  .d-2 { animation-delay: 0.1s; }
+  .d-3 { animation-delay: 0.15s; }
+  .d-4 { animation-delay: 0.2s; }
+  .d-5 { animation-delay: 0.25s; }
+
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(50px);
+    opacity: 0.35;
+    animation: drift 12s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .card-lift {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 42, 81, 0.12);
+    border-color: var(--color-sage-600);
+  }
+
+  .bar-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-shine::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: barShine 2s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fadeUp, .animate-toastIn, .orb, .bar-shine::after {
+      animation: none !important;
+    }
+    .card-lift:hover {
+      transform: none;
+    }
+  }
+}

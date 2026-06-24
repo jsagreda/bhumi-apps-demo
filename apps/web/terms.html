@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — Bhumi Yoga Academy</title>
+  <meta name="description" content="Términos y condiciones de uso del sitio web demo-yoga.app de Bhumi Yoga Academy." />
+  <link rel="icon" type="image/png" href="assets/isotipos/bhumi-isotipo-color.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:    #1a2a51;
+      --rojo:    #cf5038;
+      --rojo-h:  #b8442e;
+      --crema:   #fdf8f5;
+      --arena:   #f1e7da;
+      --salvia:  #869a97;
+      --fog:     #a0a0a0;
+      --outline: #e8ddd4;
+      --text:    #2c2c2c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--crema);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--outline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) { header { padding: 16px 40px; } }
+
+    header .logo-mark img { height: 42px; width: auto; display: block; }
+
+    header .brand { display: flex; flex-direction: column; line-height: 1.15; }
+
+    header .brand .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 640px) { header .brand .brand-name { font-size: 1.1rem; } }
+
+    header .brand .brand-name .rojo { color: var(--rojo); }
+
+    header .brand .brand-tag {
+      font-size: 0.52rem;
+      font-weight: 600;
+      color: var(--salvia);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+
+    /* ── Doc badge ── */
+    .doc-badge {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 4px 13px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Headings ── */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--fog);
+      margin-bottom: 48px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: #fff;
+      border: 1px solid var(--outline);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fog);
+      margin-bottom: 14px;
+    }
+
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--rojo-h); text-decoration: none; font-size: 0.875rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 48px; }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--outline);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.68rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: #444; }
+
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #444; }
+
+    /* ── Boxes ── */
+    .highlight-box {
+      background: #fef4f2;
+      border-left: 3px solid var(--rojo);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; color: #8b3c2c; font-size: 0.875rem; font-weight: 500; }
+
+    .info-box {
+      background: var(--arena);
+      border-left: 3px solid var(--salvia);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .info-box p { margin-bottom: 0; color: #5a6b68; font-size: 0.875rem; font-weight: 500; }
+
+    .warning-box {
+      background: #fff8ed;
+      border-left: 3px solid #e5a827;
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .warning-box p { margin-bottom: 0; color: #8a5f00; font-size: 0.875rem; font-weight: 500; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+
+    .contact-card a { color: #f4b8ab; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card p { color: rgba(255,255,255,0.75); margin-bottom: 6px; font-size: 0.875rem; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--outline);
+      font-size: 0.78rem;
+      color: var(--fog);
+      background: var(--crema);
+    }
+
+    footer a { color: var(--rojo); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    a { color: var(--rojo); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <img src="assets/isotipos/bhumi-isotipo-color.png" alt="Bhumi Yoga Academy" />
+  </div>
+  <div class="brand">
+    <span class="brand-name">Bhumi <span class="rojo">Yoga</span> Academy</span>
+    <span class="brand-tag">Armenia · Quindío</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="doc-badge">Documento Legal · Bhumi Web</div>
+  <h1>Términos y Condiciones</h1>
+  <p class="meta">Última actualización: 16 de junio de 2026 &nbsp;·&nbsp; Versión 2.0 &nbsp;·&nbsp; demo-yoga.app</p>
+
+  <div class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">Aceptación de los términos</a></li>
+      <li><a href="#s2">Descripción y alcance del sitio</a></li>
+      <li><a href="#s3">Registro y cuenta de usuario</a></li>
+      <li><a href="#s4">Inicio de sesión con Google</a></li>
+      <li><a href="#s5">Compras y pagos</a></li>
+      <li><a href="#s6">Uso permitido del sitio</a></li>
+      <li><a href="#s7">Información sobre servicios y precios</a></li>
+      <li><a href="#s8">Propiedad intelectual</a></li>
+      <li><a href="#s9">Enlaces a terceros</a></li>
+      <li><a href="#s10">Limitación de responsabilidad</a></li>
+      <li><a href="#s11">Disponibilidad del sitio</a></li>
+      <li><a href="#s12">Modificaciones</a></li>
+      <li><a href="#s13">Ley aplicable</a></li>
+      <li><a href="#s14">Contacto</a></li>
+    </ol>
+  </div>
+
+  <div class="info-box">
+    <p>Estos términos aplican al <strong>sitio web demo-yoga.app</strong>, incluyendo su funcionalidad de cuenta de usuario y tienda. La reserva y gestión de clases se realiza en <a href="https://bhumi-demo.firebaseapp.com" target="_blank">bhumi-demo.firebaseapp.com</a>, que tiene sus propios términos y condiciones.</p>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">1</span>Aceptación de los términos</h2>
+    <p>Al visitar, registrarte o usar el sitio web <strong>demo-yoga.app</strong> ("el sitio"), aceptas cumplir y quedar vinculado por estos Términos y Condiciones ("Términos"). Si no estás de acuerdo con alguno de ellos, te pedimos que no uses el sitio.</p>
+    <p>El uso continuado del sitio después de cualquier modificación de estos Términos constituye tu aceptación de los nuevos Términos. Estos Términos son aplicables a todos los visitantes y usuarios registrados del sitio.</p>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">2</span>Descripción y alcance del sitio</h2>
+    <p>El sitio web <strong>demo-yoga.app</strong>, operado por <strong>Bhumi Yoga Academy</strong>, presenta la academia, sus servicios, filosofía y comunidad al público general, e incluye además las siguientes funcionalidades:</p>
+    <ul>
+      <li><strong>Creación de cuenta de usuario</strong>, mediante correo electrónico y contraseña, o mediante inicio de sesión con Google.</li>
+      <li><strong>Catálogo de productos y servicios</strong> de nuestra tienda esencial, con un flujo de compra que actualmente se completa por WhatsApp y que próximamente incorporará una pasarela de pago en línea.</li>
+    </ul>
+
+    <div class="info-box">
+      <p>Para reservar clases, adquirir paquetes de clases o gestionar tu asistencia al estudio, utiliza la aplicación <strong>Bhumi Calendar</strong> disponible en <a href="https://bhumi-demo.firebaseapp.com" target="_blank">bhumi-demo.firebaseapp.com</a>, que tiene sus propios términos y condiciones independientes a este sitio.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">3</span>Registro y cuenta de usuario</h2>
+    <p>Para acceder a ciertas funciones del sitio puedes crear una cuenta mediante:</p>
+    <ul>
+      <li>Correo electrónico y contraseña.</li>
+      <li>Inicio de sesión con tu cuenta de Google (ver sección 4).</li>
+    </ul>
+    <p>Eres responsable de mantener la confidencialidad de tus credenciales y de todas las actividades que ocurran bajo tu cuenta. Notifícanos de inmediato a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a> si sospechas de un acceso no autorizado a tu cuenta.</p>
+    <p>Bhumi Yoga Academy se reserva el derecho de suspender o eliminar cuentas que proporcionen información falsa o que violen estos Términos.</p>
+    <p>Puedes solicitar la eliminación de tu cuenta y de los datos asociados en cualquier momento escribiéndonos a <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a>.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">4</span>Inicio de sesión con Google</h2>
+    <p>El sitio ofrece la opción de iniciar sesión utilizando tu cuenta de Google a través de Google Sign-In. Esta función es <strong>completamente voluntaria</strong>: puedes optar en cualquier momento por registrarte con correo electrónico y contraseña en lugar de usar tu cuenta de Google.</p>
+    <p>Al elegir "Continuar con Google", autorizas a Bhumi Yoga Academy a recibir de Google únicamente los siguientes datos básicos de identidad, con el fin exclusivo de crear y autenticar tu cuenta en el sitio:</p>
+    <ul>
+      <li>Tu nombre.</li>
+      <li>Tu dirección de correo electrónico de Google.</li>
+      <li>Tu foto de perfil pública (si está disponible).</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>Esta función utiliza únicamente el servicio de autenticación de Google (Google Sign-In). El sitio <strong>no</strong> solicita ni obtiene acceso a tu Google Calendar, Gmail, Google Drive ni a ningún otro dato o servicio de tu cuenta de Google.</p>
+    </div>
+
+    <p>Puedes revocar el acceso de Bhumi Yoga Academy a tu cuenta de Google en cualquier momento desde <strong>myaccount.google.com → Seguridad → Aplicaciones de terceros con acceso a tu cuenta</strong>.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">5</span>Compras y pagos</h2>
+    <p>El sitio permite explorar el catálogo de productos de nuestra tienda esencial (esterillas, accesorios y artículos relacionados con la práctica de yoga).</p>
+    <p><strong>Estado actual:</strong> mientras no se habilite una pasarela de pago en línea, las compras iniciadas en el sitio se completan a través de un mensaje directo de WhatsApp con nuestro equipo, donde se coordina el pago y la entrega o recogida del producto.</p>
+
+    <div class="warning-box">
+      <p>Bhumi Yoga Academy planea incorporar próximamente una pasarela de pago en línea para procesar compras directamente en el sitio. Cuando esto ocurra, actualizaremos estos Términos y la Política de Privacidad para detallar el proveedor de pagos utilizado, los datos procesados y las condiciones aplicables, y te lo notificaremos de forma visible en el sitio.</p>
+    </div>
+
+    <p>Mientras el pago se gestione por WhatsApp, ningún dato de tarjeta o método de pago es recopilado, almacenado o procesado por este sitio web. Una vez habilitada la pasarela de pago en línea, los datos de pago serán procesados directamente por el proveedor de pagos certificado que se contrate, y Bhumi Yoga Academy no almacenará los datos completos de tu método de pago en sus propios servidores.</p>
+    <p>No se realizan reembolsos por productos ya entregados, salvo defectos de fabricación verificables, que deben reportarse dentro de los 8 días siguientes a la entrega.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">6</span>Uso permitido del sitio</h2>
+    <p>Al visitar o usar demo-yoga.app, aceptas usarlo únicamente para fines legales y de manera que no infrinja los derechos de terceros. En particular, te comprometes a no:</p>
+    <ul>
+      <li>Proporcionar información falsa o engañosa al crear tu cuenta.</li>
+      <li>Copiar, reproducir o redistribuir contenido del sitio sin autorización escrita de Bhumi Yoga Academy.</li>
+      <li>Usar herramientas automatizadas (bots, crawlers, scrapers) para extraer contenido del sitio de forma masiva.</li>
+      <li>Intentar acceder a cuentas de otros usuarios o vulnerar la seguridad, integridad o disponibilidad del sitio.</li>
+      <li>Hacerte pasar por Bhumi Yoga Academy o sus representantes.</li>
+      <li>Publicar o transmitir contenido que sea ilegal, difamatorio, obsceno o que infrinja derechos de terceros.</li>
+    </ul>
+    <p>El incumplimiento de estas condiciones puede derivar en la suspensión de tu cuenta, acciones legales y en el bloqueo de acceso al sitio.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">7</span>Información sobre servicios y precios</h2>
+    <p>La información sobre clases, horarios, talleres, retiros y precios publicada en este sitio tiene carácter <strong>informativo y referencial</strong>. Bhumi Yoga Academy se reserva el derecho de modificar sus servicios, precios y horarios en cualquier momento sin previo aviso.</p>
+    <ul>
+      <li>Los precios mostrados pueden variar. Los precios vigentes se confirman directamente con el estudio o al momento de la compra.</li>
+      <li>La disponibilidad de clases y lugares se gestiona en la aplicación de calendario, no en este sitio.</li>
+      <li>Bhumi Yoga Academy no se responsabiliza por decisiones tomadas con base en información desactualizada del sitio.</li>
+    </ul>
+    <p>Para información actualizada sobre precios y disponibilidad, contáctanos directamente por WhatsApp o correo electrónico.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">8</span>Propiedad intelectual</h2>
+    <p>Todo el contenido publicado en <strong>demo-yoga.app</strong> —incluyendo textos, imágenes, fotografías, logotipos, diseños, videos, ilustraciones y código fuente— es propiedad exclusiva de <strong>Bhumi Yoga Academy</strong> o de sus autores y licenciantes, y está protegido por las leyes de propiedad intelectual de la República de Colombia.</p>
+    <p>Queda expresamente prohibido:</p>
+    <ul>
+      <li>Reproducir, copiar o distribuir contenido del sitio sin autorización escrita previa.</li>
+      <li>Modificar o crear obras derivadas basadas en contenido del sitio.</li>
+      <li>Usar los logotipos o nombre de marca de Bhumi Yoga Academy sin autorización.</li>
+      <li>Usar el contenido del sitio con fines comerciales sin licencia expresa.</li>
+    </ul>
+    <p>Se permite compartir enlaces directos al sitio en redes sociales o plataformas digitales, siempre que se atribuya correctamente la fuente.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">9</span>Enlaces a terceros</h2>
+    <p>El sitio puede incluir enlaces a plataformas externas como Instagram, WhatsApp, Google Maps y la aplicación Bhumi Calendar. Estos enlaces se proporcionan únicamente para tu conveniencia.</p>
+
+    <div class="highlight-box">
+      <p>Bhumi Yoga Academy no controla ni se responsabiliza por el contenido, las políticas de privacidad ni las prácticas de ningún sitio o servicio de terceros al que se enlace desde demo-yoga.app.</p>
+    </div>
+
+    <p>Al seguir un enlace externo, abandonas el sitio demo-yoga.app y quedan aplicables los términos del sitio de destino. Te recomendamos revisar las políticas de privacidad de cada plataforma que visites.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span>Limitación de responsabilidad</h2>
+    <p>El sitio web demo-yoga.app se proporciona <em>"tal cual"</em> y <em>"según disponibilidad"</em>, sin garantías de ningún tipo, expresas o implícitas.</p>
+    <p>Bhumi Yoga Academy no será responsable por:</p>
+    <ul>
+      <li>Errores u omisiones en el contenido del sitio.</li>
+      <li>Interrupciones o indisponibilidad del sitio por causas técnicas, mantenimiento o fuerza mayor.</li>
+      <li>Daños directos, indirectos, incidentales o consecuentes derivados del uso o imposibilidad de uso del sitio.</li>
+      <li>El contenido, productos o servicios ofrecidos por sitios de terceros accesibles desde el sitio.</li>
+      <li>Demoras o inconvenientes en la coordinación de compras realizadas por WhatsApp mientras no exista una pasarela de pago en línea.</li>
+      <li>Virus u otros elementos dañinos que puedan afectar tu dispositivo al acceder al sitio.</li>
+    </ul>
+    <p>Hasta el máximo permitido por la ley colombiana, la responsabilidad total de Bhumi Yoga Academy ante cualquier reclamación derivada del uso de este sitio se limita al valor efectivamente pagado por el usuario en la transacción correspondiente, si la hubiera.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span>Disponibilidad del sitio</h2>
+    <p>Bhumi Yoga Academy hará esfuerzos razonables para mantener el sitio disponible de forma continua, pero no garantiza una disponibilidad del 100%. El sitio puede estar temporalmente inaccesible por:</p>
+    <ul>
+      <li>Mantenimiento planificado o no planificado.</li>
+      <li>Actualizaciones de contenido, diseño o nuevas funcionalidades (como la pasarela de pago).</li>
+      <li>Incidentes de seguridad o causas de fuerza mayor.</li>
+      <li>Factores externos fuera de nuestro control (interrupciones de infraestructura de Firebase/Google).</li>
+    </ul>
+    <p>Bhumi Yoga Academy se reserva el derecho de modificar, suspender o discontinuar el sitio en cualquier momento sin previo aviso.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2><span class="num">12</span>Modificaciones</h2>
+    <p>Bhumi Yoga Academy puede actualizar estos Términos en cualquier momento, en particular para reflejar nuevas funcionalidades como la pasarela de pago en línea. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" visible al inicio de este documento.</p>
+    <p>Los cambios entran en vigor en el momento de su publicación en el sitio. Te recomendamos revisar estos Términos periódicamente. El uso continuado del sitio tras la publicación de cambios constituye la aceptación de los Términos actualizados.</p>
+  </section>
+
+  <!-- 13 -->
+  <section id="s13">
+    <h2><span class="num">13</span>Ley aplicable</h2>
+    <p>Estos Términos se rigen e interpretan de conformidad con las leyes de la <strong>República de Colombia</strong>, incluyendo en particular:</p>
+    <ul>
+      <li>Ley 1480 de 2011 — Estatuto del Consumidor.</li>
+      <li>Ley 1581 de 2012 — Régimen de Protección de Datos Personales.</li>
+      <li>Ley 527 de 1999 — Comercio Electrónico y firmas digitales.</li>
+      <li>Decisión Andina 351 de 1993 — Régimen de Propiedad Intelectual.</li>
+    </ul>
+    <p>Cualquier controversia que surja en relación con el uso de este sitio o estos Términos será sometida a la jurisdicción de los tribunales competentes de la República de Colombia.</p>
+  </section>
+
+  <!-- 14 -->
+  <section id="s14">
+    <h2><span class="num">14</span>Contacto</h2>
+    <p>Si tienes preguntas, comentarios o inquietudes sobre estos Términos, sobre tu cuenta, sobre una compra o sobre cualquier asunto relacionado con Bhumi Yoga Academy, puedes contactarnos:</p>
+    <div class="contact-card">
+      <h3>Bhumi Yoga Academy</h3>
+      <p>Correo electrónico: <a href="mailto:hello@demo-yoga.app">hello@demo-yoga.app</a></p>
+      <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank">+57 300 131 8160</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/demo_yoga/" target="_blank">@demo_yoga</a></p>
+      <p style="margin-top:12px; font-size:0.78rem; opacity:0.6;">Armenia, Quindío &nbsp;·&nbsp; Colombia &nbsp;·&nbsp; Ley 1480 de 2011 &nbsp;·&nbsp; Ley 1581 de 2012</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Bhumi Yoga Academy &nbsp;·&nbsp; Armenia, Quindío &nbsp;·&nbsp;
+  <a href="/privacy-policy">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="/terms">Términos y Condiciones</a> &nbsp;·&nbsp;
+  <a href="/purpose">Propósito del Sitio</a>
+</footer>
+
+</body>
+</html>

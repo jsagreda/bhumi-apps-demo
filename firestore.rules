@@ -1,0 +1,94 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email.matches('.*@demo-yoga\\.app');
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // ── userProfiles ──────────────────────────────────────────────────────────
+    // El estudiante lee y escribe su propio perfil.
+    // Admin puede leer cualquier perfil (para el manager).
+    // Nadie puede auto-asignarse un rol distinto a 'student' desde el cliente.
+    match /userProfiles/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid)
+                    && request.resource.data.role == 'student';
+      allow update: if isOwner(uid)
+                    && !request.resource.data.diff(resource.data)
+                        .affectedKeys().hasAny(['role']);
+      allow delete: if false;
+    }
+
+    // ── agendamientos ─────────────────────────────────────────────────────────
+    // Cualquier usuario autenticado puede leer (para ver cupos).
+    // El estudiante crea solo con su propio userId y estado 'activo'.
+    // El estudiante solo puede cambiar estado a 'cancelado' en su reserva.
+    // Admin puede actualizar cualquier campo (asistencia, notas) y borrar.
+    match /agendamientos/{id} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn()
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.estado == 'activo';
+      allow update: if isAdmin()
+                    || (isOwner(resource.data.userId)
+                        && resource.data.estado == 'activo'
+                        && request.resource.data.estado == 'cancelado'
+                        && request.resource.data.diff(resource.data)
+                            .affectedKeys().hasOnly(['estado', 'canceladoEn']));
+      allow delete: if isAdmin();
+    }
+
+    // ── slots (contadores atómicos de cupos) ──────────────────────────────────
+    // Creados por runTransaction desde el cliente autenticado.
+    // Solo admin puede borrar (para reiniciar un slot manualmente si hace falta).
+    match /slots/{slotId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdmin();
+    }
+
+    // ── Colecciones del ERP (bhumi-erp / bhumi-yoga-studio-manager) ───────────
+    // Solo accesibles para cuentas @demo-yoga.app.
+    match /students/{id} {
+      allow read: if isSignedIn();   // Estudiantes leen para verificar su paquete
+      allow write: if isAdmin();
+    }
+    match /transactions/{id} {
+      allow read, write: if isAdmin();
+    }
+    match /inventory/{id} {
+      allow read, write: if isAdmin();
+    }
+    match /events/{id} {
+      allow read, write: if isAdmin();
+    }
+    match /storeSales/{id} {
+      allow read, write: if isAdmin();
+    }
+    match /cashReconciliations/{id} {
+      allow read, write: if isAdmin();
+    }
+    // Configuración del ERP (tarifas, horario de instructores, metas del dashboard)
+    match /config/{id} {
+      allow read, write: if isAdmin();
+    }
+    // Correcciones de instructor por sesión (nómina), un doc por mes YYYY-MM
+    match /sessionInstructors/{month} {
+      allow read, write: if isAdmin();
+    }
+
+    // ── Denegar todo lo demás ─────────────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
