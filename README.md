@@ -5,7 +5,27 @@
 > accounting, instructor payroll and a public marketing site — with **zero
 > double data entry** across the whole business.
 
-**🔗 Live demo:** [bhumi-yoga-demo.web.app](https://bhumi-yoga-demo.web.app) — the public marketing site, deployed to an isolated demo Firebase project.
+## 🔗 Live demo
+
+All four apps run on an **isolated demo Firebase project** (`bhumi-yoga-demo`)
+seeded with fictional data — completely separate from any production system.
+
+| App | Live URL |
+|---|---|
+| 🌐 Public Web | https://bhumi-yoga-demo.web.app |
+| 📅 Calendar | https://bhumi-demo-calendar.web.app |
+| 🧘 Studio Manager | https://bhumi-demo-manager.web.app |
+| 📊 ERP / Back-office | https://bhumi-demo-erp.web.app |
+
+**Demo login** (Studio Manager & ERP):
+
+```
+user:     demo
+password: bhumidemo2026
+```
+
+> The demo backend holds only fictional students, transactions and sales.
+> Feel free to click around — it cannot affect any real data.
 
 <p>
   <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white">
