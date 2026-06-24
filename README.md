@@ -5,6 +5,8 @@
 > accounting, instructor payroll and a public marketing site — with **zero
 > double data entry** across the whole business.
 
+**🔗 Live demo:** [bhumi-yoga-demo.web.app](https://bhumi-yoga-demo.web.app) — the public marketing site, deployed to an isolated demo Firebase project.
+
 <p>
   <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white">
